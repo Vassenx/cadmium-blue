@@ -51,8 +51,16 @@ public class Interactable : MonoBehaviour
                 Debug.Log(quality);
                 
                 manager.CompletedMeals.Add(currentMeal, quality);
-                
-                manager.GetPlayer().GetStateMachine().ChangeState(manager.GetStateByName("Gather"));
+
+                if (manager.CompletedMeals.Count >= manager.Menu.Count)
+                {
+                    // TODO: done with food
+                    Debug.Log("TODO done with menu");
+                }
+                else
+                {
+                    manager.GetPlayer().GetStateMachine().ChangeState(manager.GetStateByName("Gather"));
+                }
                 cookTimer.EndTimer();
                 break;
             default:

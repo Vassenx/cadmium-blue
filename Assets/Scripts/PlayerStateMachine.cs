@@ -20,6 +20,7 @@ public class PlayerStateMachine : MonoBehaviour
     {
         if (currentState != nextState)
         {
+            prevState = currentState;
             currentState.Exit();
             currentState = nextState;
             currentState.Enter();
