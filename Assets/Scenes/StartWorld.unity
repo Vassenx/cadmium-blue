@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 227437570}
   - component: {fileID: 227437569}
   - component: {fileID: 227437568}
+  - component: {fileID: 227437572}
   - component: {fileID: 227437567}
   m_Layer: 0
   m_Name: States
@@ -171,6 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37a81b0c0d00e0a43b650ee9742f0cef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateName: Wave
 --- !u!114 &227437568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +185,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9b194d7d37e714af1b1adf165e4a6ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateName: Cook
 --- !u!114 &227437569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ffc5d7476ace85469bd7c0f28e556e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateName: Prep
 --- !u!114 &227437570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,6 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e010bb5a67e6447b5b340d541cded5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stateName: Gather
 --- !u!114 &227437571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -219,10 +224,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb138ea8bd52fc5449e22c43352b069d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1439412955}
+  stateName: Summon
   lastStateOfOtherWorld: {fileID: 227437567}
   loadingScreen: {fileID: 135791786740517843}
   persistentCanvas: {fileID: 1375592916}
+--- !u!114 &227437572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 227437565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d9a70e321206874ca8d9cdc851311aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateName: FinishMeal
 --- !u!1 &402746334
 GameObject:
   m_ObjectHideFlags: 0
@@ -253,13 +271,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04ca6eb7658a4f5eb256e99c56d63c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DTaskState: 0
-  CookTime: 0
   Menu:
   - {fileID: 11400000, guid: 67c1bde21082f4564a76aa7de725a35d, type: 2}
   AtHome: 1
   player: {fileID: 1439412955}
-  summonState: {fileID: 227437571}
+  cookTimer: {fileID: 854413958}
+  states:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!4 &402746336
 Transform:
   m_ObjectHideFlags: 0
@@ -420,6 +442,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0740ab81d468b9d43b6f375c717b3f79, type: 3}
+--- !u!114 &854413958 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3484108643636872789, guid: 0740ab81d468b9d43b6f375c717b3f79, type: 3}
+  m_PrefabInstance: {fileID: 854413957}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00bb306a314502f43af512045ea56e1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1303343998
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,17 +4,17 @@ using UnityEngine.SceneManagement;
 
 public class Interactable : MonoBehaviour
 {
-    Meal currentMeal;
- 
-    [SerializeField] private CookTimer cookTimer;
+    private Meal currentMeal;
 
-    void Start() {
-        currentMeal = GlobalManager.Instance.Menu[GlobalManager.Instance.CompletedMeals.Count];
-        switch (GlobalManager.Instance.DTaskState) {
-            case 0:
+    void Start()
+    {
+        GlobalManager manager = GlobalManager.Instance;
+        currentMeal = manager.Menu[manager.CompletedMeals.Count];
+        switch (manager.GetPlayer().GetStateMachine().currentState.GetStateName()) {
+            case "Gather":
                 transform.position = currentMeal.gatherLocation;
                 break;
-            case 1:
+            case "Prep":
                 transform.position = currentMeal.prepLocation;
                 break;
             default:
@@ -23,36 +23,40 @@ public class Interactable : MonoBehaviour
         }
     }
 
-    public void Interact() {
-        switch (GlobalManager.Instance.DTaskState) {
-            case 0:
-                GlobalManager.Instance.DTaskState++;
+    public void Interact()
+    {
+        CookTimer cookTimer = GlobalManager.Instance.GetCookTimer();
+        GlobalManager manager = GlobalManager.Instance;
+        // dtask state 0 = gather, 1 = prep, 2 = cook, 3 = stop-cook
+        switch (manager.GetPlayer().GetStateMachine().currentState.GetStateName()) {
+            case "Gather":
                 transform.position = currentMeal.prepLocation;
-                if (currentMeal.breakPoint == 0) GlobalManager.Instance.AtHome = false;
+                if (currentMeal.breakPoint == 0) manager.AtHome = false;
+                GlobalManager.Instance.GetPlayer().GetStateMachine().ChangeState(manager.GetStateByName("Prep"));
                 break;
-            case 1:
-                GlobalManager.Instance.DTaskState++;
-                if (currentMeal.breakPoint == 1) GlobalManager.Instance.AtHome = false;
-                break;
-            case 2:
-                // Do not transition immediately so that players can't double-click the to skip being summoned
-                // GlobalManager.Instance.DTaskState++;
-                GlobalManager.Instance.CookTime = currentMeal.cookTime;
-                if (currentMeal.breakPoint == 2) GlobalManager.Instance.AtHome = false;
+            case "Prep":
+                if (currentMeal.breakPoint == 1) manager.AtHome = false;
+                manager.GetPlayer().GetStateMachine().ChangeState(manager.GetStateByName("Cook"));
                 cookTimer.StartTimer(currentMeal.goodThreshold, currentMeal.greatThreshold, currentMeal.cookTime);
                 break;
-            case 3:
-                int quality = 2; 
-                if (GlobalManager.Instance.CookTime < currentMeal.greatThreshold) quality = 1;
-                if (GlobalManager.Instance.CookTime < currentMeal.goodThreshold) quality = 0;
+            case "Cook":
+                // Do not transition immediately so that players can't double-click the to skip being summoned
+                if (currentMeal.breakPoint == 2) manager.AtHome = false;
+                GlobalManager.Instance.GetPlayer().GetStateMachine().ChangeState(manager.GetStateByName("FinishMeal"));
+                break;
+            case "FinishMeal":
+                int quality = 2;
+                if (cookTimer.curTime < currentMeal.greatThreshold) quality = 1;
+                if (cookTimer.curTime < currentMeal.goodThreshold) quality = 0;
                 Debug.Log(quality);
-                GlobalManager.Instance.CompletedMeals.Add(currentMeal, quality);
+                
+                manager.CompletedMeals.Add(currentMeal, quality);
+                
+                manager.GetPlayer().GetStateMachine().ChangeState(manager.GetStateByName("Gather"));
                 cookTimer.EndTimer();
                 break;
             default:
                 break;
-        
-            
         }
     }
 }
