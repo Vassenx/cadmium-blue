@@ -6,13 +6,14 @@ using UnityEngine.UI;
 
 public class SummonState : BasePlayerState
 {
-    [SerializeField] public Player player;
     [SerializeField] public BasePlayerState lastStateOfOtherWorld; 
     private BasePlayerState nextState;
 
     [SerializeField] private Image loadingScreen;
     [SerializeField] private Canvas persistentCanvas;
     private List<Transform> hiddenUI;
+    
+    private bool wasSummoned = false;
 
     private void Start()
     {
@@ -31,7 +32,7 @@ public class SummonState : BasePlayerState
         base.Enter();
 
         nextState = lastStateOfOtherWorld;
-        lastStateOfOtherWorld = player.GetStateMachine().prevState;
+        lastStateOfOtherWorld = GlobalManager.Instance.GetPlayer().GetStateMachine().prevState;
         
         StartCoroutine(LoadingScreen(3f));
     }
@@ -42,12 +43,19 @@ public class SummonState : BasePlayerState
         
         yield return new WaitForSeconds(waitTime);
         LevelManager.Instance.SwitchWorlds();
+        wasSummoned = true;
     }
 
     private void OnFinishLoadScene(string sceneName) // async load scene
     {
-        player.GetStateMachine().ChangeState(nextState);
+        if (!wasSummoned)
+        {
+            return;
+        }
+        
+        GlobalManager.Instance.GetPlayer().GetStateMachine().ChangeState(nextState);
         ResetUIAfterLoad();
+        wasSummoned = false;
     }
 
     // hacky
