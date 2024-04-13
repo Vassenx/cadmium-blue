@@ -18,6 +18,7 @@ public class PlayerMovement : MonoBehaviour
     {
         cam = Camera.main;
         rb = GetComponent<Rigidbody2D>();
+        DontDestroyOnLoad(gameObject);
     }
 
     void FixedUpdate()
