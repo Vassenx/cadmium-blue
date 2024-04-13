@@ -32,8 +32,8 @@ public class GlobalManager : MonoBehaviour
   void FixedUpdate() {
     if (CookTime > 0) {
         CookTime -= Time.deltaTime;
-    }
-	}
+    } 
+  }
 
   void Update()
   {
@@ -42,5 +42,11 @@ public class GlobalManager : MonoBehaviour
 	  {
 		  player.GetStateMachine().ChangeState(summonState);
 	  }
+
+      if (Input.GetKeyDown(KeyCode.N))
+      {
+          var timer = GameObject.FindObjectOfType<CookTimer>();
+          timer.StartTimer(2f, 5f, 45f);
+      }
   }
 }
