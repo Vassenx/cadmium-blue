@@ -31,14 +31,15 @@ public class Interactable : MonoBehaviour
                 break;
             case 2:
                 // Do not transition immediately so that players can't double-click the to skip being summoned
+                // GlobalManager.Instance.DTaskState++;
                 GlobalManager.Instance.CookTime = currentMeal.cookTime;
-
                 if (currentMeal.breakPoint == 2) GlobalManager.Instance.AtHome = false;
                 break;
             case 3:
                 int quality = 2; 
                 if (GlobalManager.Instance.CookTime < currentMeal.greatThreshold) quality = 1;
                 if (GlobalManager.Instance.CookTime < currentMeal.goodThreshold) quality = 0;
+                Debug.Log(quality);
                 GlobalManager.Instance.CompletedMeals.Add(currentMeal, quality);
                 break;
             default:

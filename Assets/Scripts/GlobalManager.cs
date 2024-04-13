@@ -4,6 +4,7 @@ using System.Linq;
 using Newtonsoft.Json;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GlobalManager : MonoBehaviour
 {
@@ -33,7 +34,9 @@ public class GlobalManager : MonoBehaviour
 	}
 
   void Update() {
-    
+    if (!AtHome && SceneManager.GetActiveScene().name == "Demon") {
+      SceneManager.LoadScene("Human");
+    }
   }
 
 	public void LoadJson()

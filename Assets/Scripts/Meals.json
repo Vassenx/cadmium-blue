@@ -6,7 +6,7 @@
         "cookTime": "60",
         "greatThreshold": "40",
         "goodThreshold": "20",
-        "breakPoint": "-1"
+        "breakPoint": "1"
     },
     {
         "name": "meal2",
