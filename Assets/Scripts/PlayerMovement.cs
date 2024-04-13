@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,6 +14,11 @@ public class PlayerMovement : MonoBehaviour
     int dashModifier = 5;
     List<GameObject> interactables = new List<GameObject>();
 
+    //0: up, 1: down, 2: left, 3: right
+    [SerializeField] private Vector2 playerDirection;
+    [SerializeField] private Vector2 lastDirection;
+    [SerializeField] private CombatController combatController;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +26,33 @@ public class PlayerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         DontDestroyOnLoad(gameObject);
     }
+    
+    void HandleOrientation()
+    {
+        float horizontal = Input.GetAxisRaw("Horizontal");
+        float vertical = Input.GetAxisRaw("Vertical");
+
+        if ((horizontal == 0 && vertical == 0) && (playerDirection.x != 0 || playerDirection.y != 0))
+        {
+            lastDirection = playerDirection;
+        }
+        
+  
+        
+        playerDirection.x = Input.GetAxisRaw("Horizontal");
+        playerDirection.y = Input.GetAxisRaw("Vertical");
+        
+        combatController.SetAnimParamFloat(horizontal, "DirX");
+        combatController.SetAnimParamFloat(vertical, "DirY");
+        combatController.SetAnimParamFloat(lastDirection.x, "LastX");
+        combatController.SetAnimParamFloat(lastDirection.y, "LastY");
+        combatController.SetAnimParamFloat(playerDirection.magnitude, "motion");
+    }
 
     void FixedUpdate()
     {
+        HandleOrientation();
+        
         if (Input.anyKey) {
             float right = 0;
             float up = 0;
@@ -43,6 +73,7 @@ public class PlayerMovement : MonoBehaviour
         else rb.velocity = UnityEngine.Vector2.zero;
     }
 
+    // TODO move camera code to LateUpdate()
     void Update() {
         transform.rotation = UnityEngine.Quaternion.identity;
         if (Input.GetKeyDown(KeyCode.Space)) {
@@ -53,6 +84,10 @@ public class PlayerMovement : MonoBehaviour
             interactables.Last().GetComponent<Interactable>().Interact();
         }
         if (!camFollowing) StartCoroutine(CameraFollow());
+        
+        //track mouse for combat
+        Debug.Log(combatController.GetMouseOrientation());
+        
     }
 
     void OnCollisionEnter2D(Collision2D other) {
@@ -75,6 +110,8 @@ public class PlayerMovement : MonoBehaviour
             camShouldFollow = false;
         }
     }
+    
+    
 
     void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject.name == "CameraBounds") {
@@ -109,4 +146,5 @@ public class PlayerMovement : MonoBehaviour
             yield return new WaitForSeconds(0.03f);
         }
     }
+    
 }

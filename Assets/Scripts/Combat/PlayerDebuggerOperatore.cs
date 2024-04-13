@@ -2,13 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WaveManager : MonoBehaviour
+public class PlayerDebuggerOperatore : MonoBehaviour
 {
-    //waves 
-    // Spawn in 
-    // FightMobs
-    // Go back when time is up
-    
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +15,4 @@ public class WaveManager : MonoBehaviour
     {
         
     }
-    
-    
 }
