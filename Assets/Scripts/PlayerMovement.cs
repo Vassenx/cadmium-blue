@@ -22,13 +22,13 @@ public class PlayerMovement : MonoBehaviour
             float right = 0;
             float up = 0;
             if (Input.GetKey(KeyCode.W)) {
-                up += 1;
+                up += 0.5f;
             }
             if (Input.GetKey(KeyCode.A)) {
                 right -= 1;
             }
             if (Input.GetKey(KeyCode.S)) {
-                up -= 1;
+                up -= 0.5f;
             }
             if (Input.GetKey(KeyCode.D)) {
                 right += 1;
