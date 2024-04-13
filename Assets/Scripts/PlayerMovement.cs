@@ -48,36 +48,51 @@ public class PlayerMovement : MonoBehaviour
     void FixedUpdate()
     {
         HandleOrientation();
-        
-        if (Input.anyKey) {
-            float right = 0;
-            float up = 0;
-            if (Input.GetKey(KeyCode.W)) {
-                up += 0.5f;
+            if (Input.anyKey)
+            {
+                float right = 0;
+                float up = 0;
+                if (Input.GetKey(KeyCode.W))
+                {
+                    up += 0.5f;
+                }
+
+                if (Input.GetKey(KeyCode.A))
+                {
+                    right -= 1;
+                }
+
+                if (Input.GetKey(KeyCode.S))
+                {
+                    up -= 0.5f;
+                }
+
+                if (Input.GetKey(KeyCode.D))
+                {
+                    right += 1;
+                }
+
+                if (!combatController.inAttackingMotion)
+                {
+                    rb.velocity = new UnityEngine.Vector2(right, up) * Time.deltaTime * speed;
+                }
             }
-            if (Input.GetKey(KeyCode.A)) {
-                right -= 1;
-            }
-            if (Input.GetKey(KeyCode.S)) {
-                up -= 0.5f;
-            }
-            if (Input.GetKey(KeyCode.D)) {
-                right += 1;
-            }
-            rb.velocity = new UnityEngine.Vector2(right, up) * Time.deltaTime * speed;
-        }
-        else rb.velocity = UnityEngine.Vector2.zero;
+            else rb.velocity = UnityEngine.Vector2.zero;
     }
 
     // TODO move camera code to LateUpdate()
     void Update() {
-        transform.rotation = UnityEngine.Quaternion.identity;
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            StartCoroutine(Dash());
-        }
-        if (Input.GetKeyDown(KeyCode.E) && interactables.Any()) {
-            rb.velocity = UnityEngine.Vector2.zero;
-            interactables.Last().GetComponent<Interactable>().Interact();
+        if (!combatController.isAttacking)
+        {
+            transform.rotation = UnityEngine.Quaternion.identity;
+            if (Input.GetKeyDown(KeyCode.Space)) {
+                StartCoroutine(Dash());
+            }
+            if (Input.GetKeyDown(KeyCode.E) && interactables.Any()) {
+                rb.velocity = UnityEngine.Vector2.zero;
+                interactables.Last().GetComponent<Interactable>().Interact();
+            }
+            combatController.Attack();
         }
     }
 

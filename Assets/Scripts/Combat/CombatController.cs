@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class CombatController : MonoBehaviour
@@ -12,15 +13,64 @@ public class CombatController : MonoBehaviour
     [SerializeField] private PlayerMovement playerMovement;
 
     [SerializeField] private Vector2 mousePosition;
-    
-    void PlayAttackAnimation()
+    [SerializeField] private GameObject[] weaponColliders;
+
+    public bool isAttacking;
+    public bool inAttackingMotion;
+    public bool isHurt;
+    [SerializeField] private float hurtTime;
+
+    private void Awake()
     {
-        //entityAnimator.Play();
+        isAttacking = false;
+        inAttackingMotion = false;
+    }
+
+    public void Attack()
+    {
+        if (Input.GetMouseButtonDown(0) && !inAttackingMotion)
+        {
+            Debug.Log(GetMouseOrientation());
+            float angle = GetMouseOrientation();
+            if (angle < 40 && angle > -20)
+            {
+                entityAnimator.Play("ATTACK_N");
+                // ensure it retains last orientation edit: it dont work, i cry, i dont care no more
+                
+            }
+            else if (angle >= 40 && angle < 120)
+            {
+                entityAnimator.Play("ATTACK_W");
+                SetAnimParamFloat(1, "LastX");
+                SetAnimParamFloat(0, "LastY");
+            }   
+            else if (angle >= 121 && angle < 260)
+            {
+                entityAnimator.Play("ATTACK_S");
+                SetAnimParamFloat(0, "LastX");
+                SetAnimParamFloat(-1, "LastY");
+            }
+            else
+            {
+                entityAnimator.Play("ATTACK_E");
+                SetAnimParamFloat(-1, "LastX");
+                SetAnimParamFloat(0, "LastY");
+            }
+        }
     }
 
     void TakeDamage()
     {
         //player will lose time
+        isHurt = true;
+        WaitForFlinch(hurtTime);
+    }
+
+    IEnumerator WaitForFlinch(float wait)
+    {
+        yield return new WaitForSeconds(wait);
+        isHurt = false;
+        yield return wait;
     }
 
     public float GetMouseOrientation()
@@ -36,17 +86,6 @@ public class CombatController : MonoBehaviour
         return angleDeg - 90;
     }
     
-    //add as animation events
-    public void EnableWeaponCollider()
-    {
-       
-    }
-
-    public void DisableWeaponCollider()
-    {
-       
-    }
-    
     /* TODO debug on scren no need until play build
     void OnGUI()
     {
@@ -60,4 +99,27 @@ public class CombatController : MonoBehaviour
     {
         entityAnimator.SetFloat(param, value);
     }
+
+    public void EnableAttack()
+    {
+        inAttackingMotion = true;
+        isAttacking = true;
+    }
+
+    public void DisableAttack()
+    {
+        isAttacking = false;
+        inAttackingMotion = false;
+    }
+
+    public void EnableWeaponCollider(int dir)
+    {
+        weaponColliders[dir].gameObject.SetActive(true);
+    }
+
+    public void DisableWeaponCollider(int dir)
+    {
+        weaponColliders[dir].gameObject.SetActive(false);
+    }
+    
 }
