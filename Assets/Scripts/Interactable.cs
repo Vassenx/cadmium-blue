@@ -46,7 +46,7 @@ public class Interactable : MonoBehaviour
             default:
                 break;
         }
-        if (SceneManager.GetActiveScene().name == "Demon") {
+        if (!GlobalManager.Instance.AtHome && SceneManager.GetActiveScene().name == "Demon") {
             SceneManager.LoadScene("Human");
         }
     }
