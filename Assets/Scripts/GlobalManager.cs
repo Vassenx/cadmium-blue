@@ -8,11 +8,11 @@ using UnityEngine;
 public class GlobalManager : MonoBehaviour
 {
   public static GlobalManager Instance { get; private set; }
-  public GameObject Target { get; set; }
   public int DTaskState = 0; // 0 = gather, 1 = prep, 2 = cook, 3 = stop-cook
   public Dictionary<Meal, int> CompletedMeals = new Dictionary<Meal, int>(); // 0 = failed, 1 = good, 2 = great
   public float CookTime = 0;
 	public List<Meal> Menu;
+  public bool AtHome = true;
 
   void Awake()
   {
@@ -31,6 +31,11 @@ public class GlobalManager : MonoBehaviour
         CookTime -= Time.deltaTime;
     }
 	}
+
+  void Update() {
+    
+  }
+
 	public void LoadJson()
     {
 			using (StreamReader r = new StreamReader("Assets/Scripts/Meals.json"))
