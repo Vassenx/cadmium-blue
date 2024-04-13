@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class PlayerStateMachine : MonoBehaviour
 {
-    public BasePlayerState currentState;
-
-    [SerializeField] public GatherState gatherState;
-
+    public BasePlayerState currentState { get; private set; }
+    public BasePlayerState prevState { get; private set; }
+    
+    [SerializeField] public BasePlayerState firstState; // starts with gather state
+    
     private void Start()
     {
-        currentState = gatherState;
+        currentState = firstState;
+        prevState = firstState;
         currentState.Enter();
     }
 

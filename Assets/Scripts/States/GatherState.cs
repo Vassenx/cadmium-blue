@@ -7,6 +7,6 @@ public class GatherState : BasePlayerState
 {
     public override void Enter()
     {
-        
+        base.Enter();
     }
 }
