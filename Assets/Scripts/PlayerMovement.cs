@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public Camera cam;
+    bool camShouldFollow = false;
+    bool camFollowing = false;
     Rigidbody2D rb;
     float speed = 200;
     int dashModifier = 5;
@@ -47,6 +50,7 @@ public class PlayerMovement : MonoBehaviour
             rb.velocity = UnityEngine.Vector2.zero;
             interactables.Last().GetComponent<Interactable>().Interact();
         }
+        if (!camFollowing) StartCoroutine(CameraFollow());
     }
 
     void OnCollisionEnter2D(Collision2D other) {
@@ -58,9 +62,23 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnCollisionExit2D(Collision2D other)
     {
+        Debug.Log(other.gameObject.name);
         if (other.gameObject.tag == "Interactable") {
             other.gameObject.transform.GetChild(0).gameObject.SetActive(false);
             interactables.Remove(other.gameObject);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other) {
+        if (other.gameObject.name == "CameraBounds") {
+            camShouldFollow = false;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D other) {
+        if (other.gameObject.name == "CameraBounds") {
+            camShouldFollow = true;
+            camFollowing = false;
         }
     }
 
@@ -69,5 +87,25 @@ public class PlayerMovement : MonoBehaviour
         speed *= dashModifier;
         yield return new WaitForSeconds(0.1f);
         speed /= dashModifier;
+    }
+
+    IEnumerator CameraFollow()
+    {
+        camFollowing = true;
+        while (camShouldFollow)
+        {
+            Vector3 distance = new Vector3(transform.position.x - cam.transform.position.x, transform.position.y - cam.transform.position.y, 0);
+            float camSpeed = 0.01f;
+            if (Vector3.Magnitude(distance) > 5) camSpeed = 0.02f;
+            cam.transform.position = Vector3.MoveTowards(cam.transform.position, cam.transform.position + (distance * camSpeed), 1);
+            yield return new WaitForSeconds(0.02f);
+        }
+        while (transform.position.x != cam.transform.position.x && transform.position.y != cam.transform.position.y)
+        {
+            Vector3 distance = new Vector3(transform.position.x - cam.transform.position.x, transform.position.y - cam.transform.position.y, 0);
+            float camSpeed = 0.005f;
+            cam.transform.position = Vector3.MoveTowards(cam.transform.position, cam.transform.position + (distance * camSpeed), 1);
+            yield return new WaitForSeconds(0.03f);
+        }
     }
 }
