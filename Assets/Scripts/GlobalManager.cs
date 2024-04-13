@@ -22,6 +22,7 @@ public class GlobalManager : MonoBehaviour
     }
 
     Instance = this;
+    DontDestroyOnLoad(gameObject);
     LoadJson();
   }
 

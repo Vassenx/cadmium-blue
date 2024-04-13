@@ -4,8 +4,8 @@
         "gatherLocation": "10,10",
         "prepLocation": "-10,-10",
         "cookTime": "60",
-        "greatThreshold": "20",
-        "goodThreshold": "40",
+        "greatThreshold": "40",
+        "goodThreshold": "20",
         "breakPoint": "-1"
     },
     {
@@ -13,8 +13,8 @@
         "gatherLocation": "0,0",
         "prepLocation": "0,0",
         "cookTime": "60",
-        "greatThreshold": "20",
-        "goodThreshold": "40",
+        "greatThreshold": "40",
+        "goodThreshold": "20",
         "breakPoint": "0"
     },
     {
@@ -22,8 +22,8 @@
         "gatherLocation": "0,0",
         "prepLocation": "0,0",
         "cookTime": "60",
-        "greatThreshold": "20",
-        "goodThreshold": "40",
+        "greatThreshold": "40",
+        "goodThreshold": "20",
         "breakPoint": "2"
     }
 ]
