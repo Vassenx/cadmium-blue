@@ -10,7 +10,6 @@ public class BasePlayerState : MonoBehaviour
     
     public virtual void Tick()
     {
-        
     }
     
     public virtual void Exit()

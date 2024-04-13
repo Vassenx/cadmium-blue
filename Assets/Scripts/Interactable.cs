@@ -19,6 +19,7 @@ public class Interactable : MonoBehaviour
                 break;
         }
     }
+
     public void Interact() {
         switch (GlobalManager.Instance.DTaskState) {
             case 0:
@@ -45,9 +46,8 @@ public class Interactable : MonoBehaviour
                 break;
             default:
                 break;
-        }
-        if (!GlobalManager.Instance.AtHome && SceneManager.GetActiveScene().name == "Demon") {
-            SceneManager.LoadScene("Human");
+        
+            
         }
     }
 }

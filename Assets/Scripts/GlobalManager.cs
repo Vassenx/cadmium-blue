@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,7 +15,9 @@ public class GlobalManager : MonoBehaviour
   public float CookTime = 0;
 	public List<Meal> Menu;
   public bool AtHome = true;
-
+  [SerializeField] private Player player;
+  [SerializeField] private SummonState summonState;
+  
   void Awake()
   {
     if (Instance != null) {
@@ -33,8 +36,13 @@ public class GlobalManager : MonoBehaviour
     }
 	}
 
-  void Update() {
-    
+  void Update()
+  {
+	  // TODO: testing
+	  if (Input.GetKeyDown(KeyCode.M))
+	  {
+		  player.GetStateMachine().ChangeState(summonState);
+	  }
   }
 
 	public void LoadJson()
