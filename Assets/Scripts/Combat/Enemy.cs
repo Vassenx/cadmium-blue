@@ -5,4 +5,5 @@ public class Enemy : ScriptableObject
 {
     public int hitPoints;
     public int speed;
+    public Vector3 spawnPoint;
 }

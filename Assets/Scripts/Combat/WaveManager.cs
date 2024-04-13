@@ -10,18 +10,18 @@ public class WaveManager : MonoBehaviour
     // Go back when time is up
 
     public Wave wave;
+    int enemyCount;
     
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        enemyCount = wave.enemyListToSpawn.Count;
+        SpawnWave();
     }
     
-    
+    void SpawnWave() {
+        foreach (var enemy in wave.enemyListToSpawn) {
+            Instantiate(enemy, enemy.spawnPoint, Quaternion.identity);
+        }
+    }
 }
