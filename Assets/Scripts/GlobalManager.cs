@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -14,7 +15,9 @@ public class GlobalManager : MonoBehaviour
   public float CookTime = 0;
 	public List<Meal> Menu;
   public bool AtHome = true;
-
+  [SerializeField] private Player player;
+  [SerializeField] private SummonState summonState;
+  
   void Awake()
   {
     if (Instance != null) {
@@ -24,36 +27,26 @@ public class GlobalManager : MonoBehaviour
 
     Instance = this;
     DontDestroyOnLoad(gameObject);
-    LoadJson();
   }
 
   void FixedUpdate() {
     if (CookTime > 0) {
         CookTime -= Time.deltaTime;
-    }
-	}
-
-  void Update() {
-    
+    } 
   }
 
-	public void LoadJson()
-    {
-			using (StreamReader r = new StreamReader("Assets/Scripts/Meals.json"))
-			{
-				string json = r.ReadToEnd();
-				Menu = JsonConvert.DeserializeObject<List<Meal>>(json);
-			}
-    }
-}
+  void Update()
+  {
+	  // TODO: testing
+	  if (Input.GetKeyDown(KeyCode.M))
+	  {
+		  player.GetStateMachine().ChangeState(summonState);
+	  }
 
-public class Meal
-{
-	public string name;
-	public string gatherLocation;
-	public string prepLocation;
-	public float cookTime;
-	public float greatThreshold;
-	public float goodThreshold;
-  public int breakPoint; // -1 = do not interrupt, 0-3 = summon to Human world
+      if (Input.GetKeyDown(KeyCode.N))
+      {
+          var timer = GameObject.FindObjectOfType<CookTimer>();
+          timer.StartTimer(2f, 5f, 45f);
+      }
+  }
 }
