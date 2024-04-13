@@ -62,7 +62,6 @@ public class PlayerMovement : MonoBehaviour
     }
     void OnCollisionExit2D(Collision2D other)
     {
-        Debug.Log(other.gameObject.name);
         if (other.gameObject.tag == "Interactable") {
             other.gameObject.transform.GetChild(0).gameObject.SetActive(false);
             interactables.Remove(other.gameObject);
