@@ -10,13 +10,12 @@ using UnityEngine.SceneManagement;
 public class GlobalManager : MonoBehaviour
 {
   public static GlobalManager Instance { get; private set; }
-  public int DTaskState = 0; // 0 = gather, 1 = prep, 2 = cook, 3 = stop-cook
   public Dictionary<Meal, int> CompletedMeals = new Dictionary<Meal, int>(); // 0 = failed, 1 = good, 2 = great
-  public float CookTime = 0;
-	public List<Meal> Menu;
+  public List<Meal> Menu;
   public bool AtHome = true;
   [SerializeField] private Player player;
-  [SerializeField] private SummonState summonState;
+  [SerializeField] private CookTimer cookTimer;
+  private List<BasePlayerState> states;
   
   void Awake()
   {
@@ -29,10 +28,37 @@ public class GlobalManager : MonoBehaviour
     DontDestroyOnLoad(gameObject);
   }
 
-  void FixedUpdate() {
-    if (CookTime > 0) {
-        CookTime -= Time.deltaTime;
-    } 
+  private void Start()
+  {
+      states = player.GetComponentsInChildren<BasePlayerState>().ToList();
+  }
+
+  public Player GetPlayer()
+  {
+      return player;
+  }
+
+  public BasePlayerState GetStateByName(string stateName)
+  {
+      foreach (BasePlayerState state in states)
+      {
+          if (state.GetStateName().Equals(stateName))
+          {
+              return state;
+          }
+      }
+
+      return null;
+  }
+
+  public void SummonPlayer()
+  {
+      player.GetStateMachine().ChangeState(GetStateByName("Summon"));
+  }
+
+  public CookTimer GetCookTimer()
+  {
+      return cookTimer;
   }
 
   void Update()
@@ -40,7 +66,7 @@ public class GlobalManager : MonoBehaviour
 	  // TODO: testing
 	  if (Input.GetKeyDown(KeyCode.M))
 	  {
-		  player.GetStateMachine().ChangeState(summonState);
+          SummonPlayer();
 	  }
 
       if (Input.GetKeyDown(KeyCode.N))
