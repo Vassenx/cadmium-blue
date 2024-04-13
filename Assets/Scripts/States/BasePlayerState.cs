@@ -10,6 +10,7 @@ public class BasePlayerState : MonoBehaviour
     /* Summoning logic */    
     protected Meal currentMeal;
     protected List<float> timesForSummons;
+    protected Meal lastMeal; // this is for when done with summoning for this state and meal. Please ignore this. Im sorry
     
     private float startTime;
     private float curTime;
@@ -28,11 +29,11 @@ public class BasePlayerState : MonoBehaviour
     {
         Debug.Log(stateName);
         
-        if (timesForSummons.Count == 0) // if not just coming back from summons and still in same state or meal as before
+        currentMeal = GlobalManager.Instance.Menu[GlobalManager.Instance.CompletedMeals.Count];
+
+        if (lastMeal != currentMeal && timesForSummons.Count == 0) // if not just coming back from summons and still in same state or meal as before
         {
-            currentMeal = GlobalManager.Instance.Menu[GlobalManager.Instance.CompletedMeals.Count];
             startTime = Time.time;
-            
             for (int i = 0; i < currentMeal.summonableStates.Count; i++)
             {
                 if (currentMeal.summonableStates[i].Equals(stateName))
@@ -47,20 +48,28 @@ public class BasePlayerState : MonoBehaviour
     public virtual void Tick()
     {
         curTime = Time.time;
-        if (timesForSummons.Count > 0)
+        if (lastMeal != currentMeal && timesForSummons.Count > 0)
         {
             if (curTime - startTime >= timesForSummons[0])
             {
+                timesForSummons.RemoveAt(0);
+                
+                // Im tired, please excuse this
+                // done with summoning during this state for this meal
+                if (timesForSummons.Count == 0)
+                {
+                    lastMeal = currentMeal;
+                }
+                
                 // SUMMON TIMEEEEEE
                 GlobalManager.Instance.SummonPlayer();
-                timesForSummons.RemoveAt(0);
             }
         }
     }
     
     public virtual void Exit()
     {
-        if (timesForSummons.Count == 0)
+        if (lastMeal == currentMeal)
         {
             startTime = 0;
             curTime = 0;
