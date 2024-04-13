@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 public class Interactable : MonoBehaviour
 {
     Meal currentMeal;
+ 
+    [SerializeField] private CookTimer cookTimer;
+
     void Start() {
         currentMeal = GlobalManager.Instance.Menu[GlobalManager.Instance.CompletedMeals.Count];
         switch (GlobalManager.Instance.DTaskState) {
@@ -36,6 +39,7 @@ public class Interactable : MonoBehaviour
                 // GlobalManager.Instance.DTaskState++;
                 GlobalManager.Instance.CookTime = currentMeal.cookTime;
                 if (currentMeal.breakPoint == 2) GlobalManager.Instance.AtHome = false;
+                cookTimer.StartTimer(currentMeal.goodThreshold, currentMeal.greatThreshold, currentMeal.cookTime);
                 break;
             case 3:
                 int quality = 2; 
@@ -43,6 +47,7 @@ public class Interactable : MonoBehaviour
                 if (GlobalManager.Instance.CookTime < currentMeal.goodThreshold) quality = 0;
                 Debug.Log(quality);
                 GlobalManager.Instance.CompletedMeals.Add(currentMeal, quality);
+                cookTimer.EndTimer();
                 break;
             default:
                 break;
