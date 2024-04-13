@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Interactable : MonoBehaviour
 {
@@ -44,6 +45,9 @@ public class Interactable : MonoBehaviour
                 break;
             default:
                 break;
+        }
+        if (SceneManager.GetActiveScene().name == "Demon") {
+            SceneManager.LoadScene("Human");
         }
     }
 }

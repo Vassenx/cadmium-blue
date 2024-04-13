@@ -34,12 +34,7 @@ public class GlobalManager : MonoBehaviour
 	}
 
   void Update() {
-    if (!AtHome && SceneManager.GetActiveScene().name == "Demon") {
-      SceneManager.LoadScene("Human");
-    }
-    if (AtHome && SceneManager.GetActiveScene().name == "Human") {
-      SceneManager.LoadScene("Demon");
-    }
+    
   }
 
 	public void LoadJson()
