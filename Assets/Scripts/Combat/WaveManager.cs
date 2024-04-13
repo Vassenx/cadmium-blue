@@ -8,6 +8,8 @@ public class WaveManager : MonoBehaviour
     // Spawn in 
     // FightMobs
     // Go back when time is up
+
+    public Wave wave;
     
     // Start is called before the first frame update
     void Start()

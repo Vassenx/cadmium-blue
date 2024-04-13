@@ -23,7 +23,6 @@ public class ObjectiveArrow : MonoBehaviour
                 float angle = 360 - (Mathf.Atan2(targetPos.x-screenMiddle.x, targetPos.y-screenMiddle.y) * 180 / Mathf.PI);
                 transform.rotation = Quaternion.Euler(transform.rotation.x, transform.rotation.y, angle);
 
-                var height = targetPos.y - screenMiddle.y;
                 var rectTransform = GetComponent<RectTransform>();
                 rectTransform.position = Camera.main.WorldToScreenPoint(GlobalManager.Instance.Target.gameObject.transform.position);
                 if (rectTransform.position.x > Screen.width - buffer) rectTransform.position = new Vector2(Screen.width - buffer, rectTransform.position.y);

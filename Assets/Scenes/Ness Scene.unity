@@ -254,6 +254,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a04ca6eb7658a4f5eb256e99c56d63c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AtHome: 1
+  DTaskState: 0
+  CookTime: 0
 --- !u!4 &402746336
 Transform:
   m_ObjectHideFlags: 0
@@ -1171,7 +1174,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1791453302}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46cb9122351e840e4b62d735aaea72c1, type: 3}
+  m_Script: {fileID: 11500000, guid: d5980780f8d184d2cbb2a3864cf98a97, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1865894043

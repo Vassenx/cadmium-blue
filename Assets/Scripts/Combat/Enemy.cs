@@ -4,5 +4,5 @@ using UnityEngine;
 public class Enemy : ScriptableObject
 {
     public int hitPoints;
-    
+    public int speed;
 }
