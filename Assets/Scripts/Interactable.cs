@@ -9,10 +9,10 @@ public class Interactable : MonoBehaviour
         currentMeal = GlobalManager.Instance.Menu[GlobalManager.Instance.CompletedMeals.Count];
         switch (GlobalManager.Instance.DTaskState) {
             case 0:
-                transform.position = new Vector2(Int32.Parse(currentMeal.gatherLocation.Split(',')[0]), Int32.Parse(currentMeal.gatherLocation.Split(',')[1]));
+                transform.position = currentMeal.gatherLocation;
                 break;
             case 1:
-                transform.position = new Vector2(Int32.Parse(currentMeal.prepLocation.Split(',')[0]), Int32.Parse(currentMeal.prepLocation.Split(',')[1]));
+                transform.position = currentMeal.prepLocation;
                 break;
             default:
                 // Set position to be kitchen stove
@@ -24,7 +24,7 @@ public class Interactable : MonoBehaviour
         switch (GlobalManager.Instance.DTaskState) {
             case 0:
                 GlobalManager.Instance.DTaskState++;
-                transform.position = new Vector2(Int32.Parse(currentMeal.prepLocation.Split(',')[0]), Int32.Parse(currentMeal.prepLocation.Split(',')[1]));
+                transform.position = currentMeal.prepLocation;
                 if (currentMeal.breakPoint == 0) GlobalManager.Instance.AtHome = false;
                 break;
             case 1:

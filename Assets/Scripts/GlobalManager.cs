@@ -27,7 +27,6 @@ public class GlobalManager : MonoBehaviour
 
     Instance = this;
     DontDestroyOnLoad(gameObject);
-    LoadJson();
   }
 
   void FixedUpdate() {
@@ -44,24 +43,4 @@ public class GlobalManager : MonoBehaviour
 		  player.GetStateMachine().ChangeState(summonState);
 	  }
   }
-
-	public void LoadJson()
-    {
-			using (StreamReader r = new StreamReader("Assets/Scripts/Meals.json"))
-			{
-				string json = r.ReadToEnd();
-				Menu = JsonConvert.DeserializeObject<List<Meal>>(json);
-			}
-    }
-}
-
-public class Meal
-{
-	public string name;
-	public string gatherLocation;
-	public string prepLocation;
-	public float cookTime;
-	public float greatThreshold;
-	public float goodThreshold;
-  public int breakPoint; // -1 = do not interrupt, 0-3 = summon to Human world
 }
