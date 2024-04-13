@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    public Camera cam;
+    Camera cam;
     bool camShouldFollow = false;
     bool camFollowing = false;
     Rigidbody2D rb;
@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        cam = Camera.main;
         rb = GetComponent<Rigidbody2D>();
     }
 
