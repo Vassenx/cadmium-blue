@@ -15,6 +15,6 @@ MonoBehaviour:
   prefab: {fileID: 1717239433042527447, guid: d453421651dd9c440a619299c2f1e2b2, type: 3}
   hitPoints: 1
   speed: 5
-  spawnPoint: {x: -11.12, y: -6.53, z: 0}
+  spawnPoint: {x: -17.58, y: 16.97, z: 0}
   playerStunTime: 0
   pushBackAmount: 0
