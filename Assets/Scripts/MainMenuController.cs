@@ -54,7 +54,7 @@ public class MainMenuController : MonoBehaviour
 
     void Update() {
         if (Input.GetKey(KeyCode.E)) {
-            if (inStart) SceneManager.LoadScene(0);
+            if (inStart) SceneManager.LoadScene("StartWorld");
             else if (inSettings) canvas.gameObject.transform.GetChild(2).gameObject.SetActive(true);
             else if (inCredits) StartCoroutine(ScrollToCredits());
         }
