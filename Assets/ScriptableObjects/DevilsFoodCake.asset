@@ -15,9 +15,9 @@ MonoBehaviour:
   dishName: DevilsFoodCake
   gatherLocation: {x: 7, y: 6}
   prepLocation: {x: 8, y: -3}
-  cookTime: 30
-  greatThreshold: 20
-  goodThreshold: 10
+  cookTime: 60
+  greatThreshold: 40
+  goodThreshold: 20
   breakPoint: 2
   battles:
   - {fileID: 11400000, guid: 0fcf8f99ba5fc5c41b4ade7b836d028b, type: 2}

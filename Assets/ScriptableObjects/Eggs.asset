@@ -15,9 +15,9 @@ MonoBehaviour:
   dishName: Eggs
   gatherLocation: {x: 5, y: 5}
   prepLocation: {x: -5, y: -5}
-  cookTime: 30
-  greatThreshold: 20
-  goodThreshold: 10
+  cookTime: 100
+  greatThreshold: 60
+  goodThreshold: 20
   breakPoint: 2
   battles:
   - {fileID: 11400000, guid: d55347fabc21ef142b61a8410fa92ff6, type: 2}
