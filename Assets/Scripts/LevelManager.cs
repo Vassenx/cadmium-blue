@@ -90,6 +90,7 @@ public class LevelManager : MonoBehaviour
             audioSource.clip = HumanSongs[currentIterationHuman%HumanSongs.Count];
             currentIterationHuman++;
             audioSource.Play();
+            GameObject.FindObjectOfType<PlayerMovement>().transform.position = new Vector3(-20, 10, 0);
             StartCoroutine(LoadAsyncScene("Human"));
         }
         else if(SceneManager.GetActiveScene().name.Equals("Human"))
@@ -97,6 +98,7 @@ public class LevelManager : MonoBehaviour
             audioSource.clip = DemonSongs[currentIterationDemon%DemonSongs.Count];
             currentIterationDemon++;
             audioSource.Play();
+            GameObject.FindObjectOfType<PlayerMovement>().transform.position = new Vector3(0, 0, 0);
             StartCoroutine(LoadAsyncScene("Demon"));
         }
     }
