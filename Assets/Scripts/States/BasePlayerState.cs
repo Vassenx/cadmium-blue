@@ -34,11 +34,11 @@ public class BasePlayerState : MonoBehaviour
         if (lastMeal != currentMeal && timesForSummons.Count == 0) // if not just coming back from summons and still in same state or meal as before
         {
             startTime = Time.time;
-            for (int i = 0; i < currentMeal.summonableStates.Count; i++)
+            for (int i = 0; i < currentMeal.battles.Count; i++)
             {
-                if (currentMeal.summonableStates[i].Equals(stateName))
+                if (currentMeal.battles[i].summonableState.Equals(stateName))
                 {
-                    timesForSummons.Add(currentMeal.summonableTimeDuringState[i]);
+                    timesForSummons.Add(currentMeal.battles[i].summonableTimeDuringState);
                 }
             }
             timesForSummons.Sort();
