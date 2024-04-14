@@ -1221,7 +1221,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Title Goes Here
+  m_text: Love and Slaughter
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2519,7 +2519,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Game Title Goes Here
+  m_text: Love and Slaughter
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3730,7 +3730,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8, y: -3.5, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2.5, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -3748,11 +3748,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   canvas: {fileID: 1636443165}
-  leftWalk: {fileID: 7400000, guid: 84d0f1a29e6c246468a4803da6126aeb, type: 2}
-  leftIdle: {fileID: 7400000, guid: 3e5f77a72a4984ff7b5878eae161cddb, type: 2}
-  rightWalk: {fileID: 7400000, guid: cb511d55e9955421c9140df46b7a391b, type: 2}
-  rightIdle: {fileID: 7400000, guid: 975abe9c683144a77a3f824011260816, type: 2}
-  upIdle: {fileID: 7400000, guid: 4dee50a1192ce4938a389bcf7c8d9598, type: 2}
+  leftWalk: {fileID: 7400000, guid: e7d65da41d89bd349a7228bee0ac342f, type: 2}
+  leftIdle: {fileID: 7400000, guid: 4b228dfcda06b22459730af66b2cc078, type: 2}
+  rightWalk: {fileID: 7400000, guid: 844ab0303f718f34cb57489a94e1aa3b, type: 2}
+  rightIdle: {fileID: 7400000, guid: a55573d29ab0930449c358d890fc09ae, type: 2}
+  upIdle: {fileID: 7400000, guid: ec19ebbca5cadbe4aaebdaab0177df20, type: 2}
 --- !u!61 &1040635298
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3796,7 +3796,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 2}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
 --- !u!95 &1040635299
 Animator:
@@ -3808,7 +3808,7 @@ Animator:
   m_GameObject: {fileID: 1040635293}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 07ba72fe5d3cc4af0b7d72b882366ce4, type: 2}
+  m_Controller: {fileID: 9100000, guid: e22f8e83fef46cd4584d20d194546c8d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
