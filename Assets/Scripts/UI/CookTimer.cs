@@ -19,10 +19,14 @@ public class CookTimer : MonoBehaviour
     void Start()
     {
         timerSlider.value = 0;
+
+        ToggleTimer(false);
     }
 
     public void StartTimer(float goodThreshold, float greatThreshold, float totalCookTime)
     {
+        ToggleTimer(true);
+        
         cookedTime = goodThreshold;
         overcookedTime = greatThreshold;
         totalTime = totalCookTime;
@@ -42,6 +46,8 @@ public class CookTimer : MonoBehaviour
     
     public void EndTimer()
     {
+        ToggleTimer(false);
+        
         curTime = 0;
         timerSlider.value = 0;
     }
@@ -61,5 +67,13 @@ public class CookTimer : MonoBehaviour
         }
         
         timerSlider.value = curTime;
+    }
+
+    private void ToggleTimer(bool enable)
+    {
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(enable);
+        }
     }
 }

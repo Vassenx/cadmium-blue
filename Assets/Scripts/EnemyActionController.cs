@@ -23,56 +23,63 @@ public class EnemyActionController : MonoBehaviour
     {
         //janky but acceptable for a gamejam
         float angle = ReturnAngle();
-        int direction;
+        
 
-        if (angle <= 220 && angle > 100)
+        if (angle <= 225 && angle > 135)
         {
             enemyAnimator.Play("EWalk_N");
         }
-        else if (angle > 20 && angle <= 120)
+        else if (angle > 45 && angle <= 135)
         {
-            enemyAnimator.Play("EWalk_W");
+            enemyAnimator.Play("EWalk_E");
         }
-        else if (angle <= 60 && angle > -61)
+        else if (angle <= 45 && angle > -45)
         {
             enemyAnimator.Play("EWalk_S");
         }
         else
         {
-            enemyAnimator.Play("EWalk_E");
+            enemyAnimator.Play("EWalk_W");
         }
     }
     
     // TODO for jack: replace these with the attack animations
     public void PlayAttackAnimation()
     {
+        //isAttacking = true;
         //janky but acceptable for a gamejam
         float angle = ReturnAngle();
-        int direction;
+        Debug.Log(angle);
 
-        if (angle <= 220 && angle > 100)
+        if (angle <= 225 && angle > 135)
         {
-            enemyAnimator.Play("EWalk_N");
+            enemyAnimator.Play("EAttack_N");
         }
-        else if (angle > 20 && angle <= 120)
+        else if (angle > 45 && angle <= 135)
         {
-            enemyAnimator.Play("EWalk_W");
+            enemyAnimator.Play("EAttack_E");
         }
-        else if (angle <= 60 && angle > -61)
+        else if (angle <= 45 && angle > -45)
         {
-            enemyAnimator.Play("EWalk_S");
+            enemyAnimator.Play("EAttack_S");
         }
         else
         {
-            enemyAnimator.Play("EWalk_E");
+            enemyAnimator.Play("EAttack_W");
         }
 
-        StartCoroutine(WaitForFlinch(2f));
+        //StartCoroutine(WaitForFlinch(0.5f));
     }
     
     IEnumerator WaitForFlinch(float wait)
     {
         yield return new WaitForSeconds(wait);
+
+        for (int i = 0; i<weaponColliders.Length; i++)
+        {
+            weaponColliders[i].SetActive(false);
+        }
+
         isAttacking = false;
         yield return wait;
     }
@@ -85,6 +92,7 @@ public class EnemyActionController : MonoBehaviour
         if (dist > minDist)
         {
             transform.position = Vector2.MoveTowards(transform.position, player.transform.position, Time.deltaTime * minionData.GetSpeed());
+            PlayMoveAnimation();
         }
     }
 
@@ -92,6 +100,7 @@ public class EnemyActionController : MonoBehaviour
     {
         GameObject player = GameObject.FindWithTag("Player");
         float dist = Vector2.Distance(transform.position, player.transform.position);
+        //Debug.Log(dist);
         if (dist < 1.5f)
         {
             isAttacking = true;
@@ -135,5 +144,6 @@ public class EnemyActionController : MonoBehaviour
     public void DisableWeaponCollider(int dir)
     {
         weaponColliders[dir].SetActive(false);
+        StartCoroutine(WaitForFlinch(0.5f));
     }
 }

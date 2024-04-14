@@ -52,8 +52,12 @@ public class Interactable : MonoBehaviour
                 else if (cookTimer.curTime < currentMeal.goodThreshold) quality = 2; //good
                 else if (cookTimer.curTime < currentMeal.greatThreshold) quality = 3; //great
                 Debug.Log(quality);
+
+                if (!manager.CompletedMeals.ContainsKey(currentMeal))
+                {
+                    manager.CompletedMeals.Add(currentMeal, quality);
+                }
                 
-                manager.CompletedMeals.Add(currentMeal, quality);
                 if (manager.CompletedMeals.Count >= manager.Menu.Count)
                 {
                     // TODO: done with food
