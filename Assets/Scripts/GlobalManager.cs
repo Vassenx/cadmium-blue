@@ -15,6 +15,7 @@ public class GlobalManager : MonoBehaviour
   public bool AtHome = true;
   [SerializeField] private Player player;
   [SerializeField] private CookTimer cookTimer;
+  [SerializeField] private ResultScreen resultScreen;
   private List<BasePlayerState> states;
 
   public int curBattleIndex = -1;
@@ -82,4 +83,11 @@ public class GlobalManager : MonoBehaviour
           GameObject.FindObjectOfType<WaveManager>().OnEnemyDeath();
       }
   }
+
+  public void ShowResultScreen(Meal meal)
+  {
+      CompletedMeals.TryGetValue(meal, out int mealQuality);
+      StartCoroutine(resultScreen.ShowResultScreen(meal, mealQuality));
+  }
+    
 }
