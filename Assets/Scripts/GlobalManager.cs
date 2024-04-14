@@ -88,7 +88,6 @@ public class GlobalManager : MonoBehaviour
   {
       CompletedMeals.TryGetValue(meal, out int mealQuality);
       StartCoroutine(resultScreen.ShowResultScreen(meal, mealQuality));
-      
   }
     
 }
