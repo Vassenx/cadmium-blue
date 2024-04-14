@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d89ffe5c4751242a6a8a6b7f877cc2bf, type: 3}
-  m_Name: HydraSteak
+  m_Name: DevilsFoodCake
   m_EditorClassIdentifier: 
-  dishName: HydraSteak
+  dishName: DevilsFoodCake
   gatherLocation: {x: 5, y: 5}
   prepLocation: {x: -5, y: -5}
   cookTime: 30

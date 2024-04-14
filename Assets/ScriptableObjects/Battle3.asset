@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 499eb3aa7bd7a344ba695b4427bd958c, type: 3}
+  m_Name: Battle3
+  m_EditorClassIdentifier: 
+  summonableState: Cooking
+  summonableTimeDuringState: 5
+  waves:
+  - {fileID: 11400000, guid: 730bcf43a28a90341b17bf7deaeed1d8, type: 2}
+  - {fileID: 11400000, guid: e840b545d8a24684fa8aa809cf38daaa, type: 2}
+  - {fileID: 11400000, guid: 6a5589a6d3d444b4f95cc970302fd242, type: 2}
