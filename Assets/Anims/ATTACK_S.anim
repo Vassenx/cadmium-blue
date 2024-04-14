@@ -22,20 +22,20 @@ AnimationClip:
     curve:
     - time: 0
       value: {fileID: -1113940863, guid: aa19a5782ef06e848bdbbc010f27b161, type: 3}
-    - time: 0.083333336
+    - time: 0.125
       value: {fileID: 240251527, guid: aa19a5782ef06e848bdbbc010f27b161, type: 3}
-    - time: 0.25
+    - time: 0.375
       value: {fileID: -2025832547, guid: aa19a5782ef06e848bdbbc010f27b161, type: 3}
-    - time: 0.33333334
+    - time: 0.5
       value: {fileID: -263685928, guid: aa19a5782ef06e848bdbbc010f27b161, type: 3}
-    - time: 0.41666666
+    - time: 0.625
       value: {fileID: 1744552823, guid: aa19a5782ef06e848bdbbc010f27b161, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 12
+  m_SampleRate: 8
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -62,7 +62,7 @@ AnimationClip:
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.5
+    m_StopTime: 0.75
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -89,21 +89,21 @@ AnimationClip:
     floatParameter: 0
     intParameter: 1
     messageOptions: 0
-  - time: 0.083333336
+  - time: 0.125
     functionName: EnableAttack
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 0
     messageOptions: 0
-  - time: 0.33333334
+  - time: 0.5
     functionName: DisableWeaponCollider
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0
     intParameter: 1
     messageOptions: 0
-  - time: 0.41666666
+  - time: 0.625
     functionName: DisableAttack
     data: 
     objectReferenceParameter: {fileID: 0}
