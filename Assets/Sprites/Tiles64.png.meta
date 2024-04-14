@@ -39,10 +39,14 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     filterMode: 0
 =======
     filterMode: 1
 >>>>>>> e38c606 (main menu (#18))
+=======
+    filterMode: 0
+>>>>>>> 31a27ac (Sprites sliced and settings applied)
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -52,21 +56,29 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
 <<<<<<< HEAD
+<<<<<<< HEAD
   spriteMode: 2
 =======
   spriteMode: 1
 >>>>>>> e38c606 (main menu (#18))
+=======
+  spriteMode: 2
+>>>>>>> 31a27ac (Sprites sliced and settings applied)
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
 <<<<<<< HEAD
+<<<<<<< HEAD
   spritePixelsToUnits: 16
 =======
   spritePixelsToUnits: 100
 >>>>>>> e38c606 (main menu (#18))
+=======
+  spritePixelsToUnits: 32
+>>>>>>> 31a27ac (Sprites sliced and settings applied)
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 1
+  spriteGenerateFallbackPhysicsShape: 0
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -92,8 +104,12 @@ TextureImporter:
 =======
     maxTextureSize: 2048
     resizeAlgorithm: 0
+<<<<<<< HEAD
     textureFormat: -1
 >>>>>>> e38c606 (main menu (#18))
+=======
+    textureFormat: 4
+>>>>>>> 31a27ac (Sprites sliced and settings applied)
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -520,7 +536,7 @@ TextureImporter:
       weights: []
 =======
   - serializedVersion: 3
-    buildTarget: WebGL
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -534,8 +550,75 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
+<<<<<<< HEAD
     sprites: []
 >>>>>>> e38c606 (main menu (#18))
+=======
+    sprites:
+    - serializedVersion: 2
+      name: Tiles64_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bde5a5865a6cbc4f9b3ea57f759dd0a
+      internalID: -1801606385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles64_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 256
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72f61a60d96c25b4ab0498bdbd31c5b3
+      internalID: 118581215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Tiles64_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 384
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22b38c4f6408ee247b8d26fbb39c6749
+      internalID: 1973188228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+>>>>>>> 31a27ac (Sprites sliced and settings applied)
     outline: []
     physicsShape: []
     bones: []
@@ -546,6 +629,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+<<<<<<< HEAD
 <<<<<<< HEAD
     nameFileIdTable:
       Tiles64_0: 548769737
@@ -570,6 +654,12 @@ TextureImporter:
 =======
     nameFileIdTable: {}
 >>>>>>> e38c606 (main menu (#18))
+=======
+    nameFileIdTable:
+      Tiles64_0: -1801606385
+      Tiles64_1: 118581215
+      Tiles64_2: 1973188228
+>>>>>>> 31a27ac (Sprites sliced and settings applied)
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
