@@ -20,5 +20,6 @@ public class RandomizeSoundClipPlays : MonoBehaviour
     public void StartAudio()
     {
         audioSource.clip = clips[Random.Range(0, clips.Count)];
+        audioSource.Play();
     }
 }
