@@ -39,10 +39,16 @@ public class Minion : MonoBehaviour
         }
     }
 
-    void Die()
+    public void Die()
     {
         //play some animation
+        Destroy(gameObject);
         
+    }
+
+    public float GetSpeed()
+    {
+        return speed;
     }
 
     private void Update()
