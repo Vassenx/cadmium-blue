@@ -46,9 +46,11 @@ public class Interactable : MonoBehaviour
                 GlobalManager.Instance.GetPlayer().GetStateMachine().ChangeState(manager.GetStateByName("FinishMeal"));
                 break;
             case "FinishMeal":
-                int quality = 2;
-                if (cookTimer.curTime < currentMeal.greatThreshold) quality = 1;
-                if (cookTimer.curTime < currentMeal.goodThreshold) quality = 0;
+                int quality = 3;
+                if (cookTimer.curTime > currentMeal.greatThreshold) quality = 0;//raw
+                else if (cookTimer.curTime <= 0) quality = 1;//burnt
+                else if (cookTimer.curTime < currentMeal.goodThreshold) quality = 2; //good
+                else if (cookTimer.curTime < currentMeal.greatThreshold) quality = 3; //great
                 Debug.Log(quality);
 
                 if (!manager.CompletedMeals.ContainsKey(currentMeal))

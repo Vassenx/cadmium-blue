@@ -463,8 +463,11 @@ MonoBehaviour:
   resultScreenCanvas: {fileID: 3285175121095589396}
   mealContainers:
   - {fileID: 6712628963853936845}
+  - {fileID: 3118576175666195800}
+  - {fileID: 1511180730424365054}
   qualityText: {fileID: 2295637439575487001}
   qualityString:
+  - RAWWWWWW
   - Horrible
   - Next Time'll be better
   - Chef's Hoof

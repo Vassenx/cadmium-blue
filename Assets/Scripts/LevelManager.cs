@@ -45,6 +45,9 @@ public class LevelManager : MonoBehaviour
         // for dontdestroyonload shenanigans
         if(!hasStarted && SceneManager.GetActiveScene().name.Equals("StartWorld"))
         {
+            audioSource.clip = DemonSongs[currentIterationDemon%DemonSongs.Count];
+            currentIterationDemon++;
+            audioSource.Play();
             StartCoroutine(LoadAsyncScene("Demon"));
             hasStarted = true;
         }

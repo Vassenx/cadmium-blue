@@ -21,3 +21,7 @@ MonoBehaviour:
   breakPoint: 2
   battles:
   - {fileID: 11400000, guid: 0fcf8f99ba5fc5c41b4ade7b836d028b, type: 2}
+  RawImage: {fileID: -1693879160, guid: 34c6a984ffe6ee24dbb975902c34499a, type: 3}
+  GoodImage: {fileID: 1056289388, guid: 34c6a984ffe6ee24dbb975902c34499a, type: 3}
+  GreatImage: {fileID: -523323557, guid: 34c6a984ffe6ee24dbb975902c34499a, type: 3}
+  OvercookedImage: {fileID: 143065267, guid: 34c6a984ffe6ee24dbb975902c34499a, type: 3}

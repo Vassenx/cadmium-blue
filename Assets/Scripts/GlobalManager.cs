@@ -10,7 +10,7 @@ using UnityEngine.SceneManagement;
 public class GlobalManager : MonoBehaviour
 {
   public static GlobalManager Instance { get; private set; }
-  public Dictionary<Meal, int> CompletedMeals = new Dictionary<Meal, int>(); // 0 = failed, 1 = good, 2 = great
+  public Dictionary<Meal, int> CompletedMeals = new Dictionary<Meal, int>(); // 0 = burnt, 1 = raw, 2 = good, 3 = great
   public List<Meal> Menu;
   public bool AtHome = true;
   [SerializeField] private Player player;

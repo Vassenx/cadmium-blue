@@ -15,5 +15,10 @@ public class Meal : ScriptableObject{
     public int breakPoint;
 
     public List<Battle> battles;
+
+    public Sprite RawImage;
+    public Sprite GoodImage;
+    public Sprite GreatImage;
+    public Sprite OvercookedImage;
 }
 

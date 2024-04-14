@@ -17,11 +17,14 @@ public class ResultScreen : MonoBehaviour
     private List<string> qualityString;
     private bool canExitScreen;
 
+    private int currentIndex;
+
 
     // Start is called before the first frame update
     void Start()
     {
         resultScreenCanvas.enabled = false;
+        currentIndex = 0;
     }
 
     private void Update()
@@ -41,8 +44,8 @@ public class ResultScreen : MonoBehaviour
     public IEnumerator ShowResultScreen(Meal currentMeal, int resultValue)
     {
         resultScreenCanvas.enabled = true;
-        mealContainers[0].InitMeal(currentMeal);
-        
+        mealContainers[currentIndex].InitMeal(currentMeal,resultValue);
+        currentIndex++;
         qualityText.text = qualityString[resultValue];
         
         //Stop updating gamestate 

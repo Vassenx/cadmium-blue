@@ -394,7 +394,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 5
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -8383,8 +8383,8 @@ Transform:
   m_GameObject: {fileID: 581137836}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.8760586, y: -8.56202, z: 0.1168758}
-  m_LocalScale: {x: 3.4, y: 1, z: 1}
+  m_LocalPosition: {x: -1.9, y: -8.56202, z: 0.1168758}
+  m_LocalScale: {x: 3.2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 282911896}
@@ -8643,8 +8643,8 @@ Transform:
   m_GameObject: {fileID: 612353216}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.6639414, y: -8.532021, z: 0.1168758}
-  m_LocalScale: {x: 3.4, y: 1, z: 1}
+  m_LocalPosition: {x: 2.7, y: -8.532021, z: 0.1168758}
+  m_LocalScale: {x: 3.2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 282911896}
