@@ -14,9 +14,6 @@ public class Meal : ScriptableObject{
     public float goodThreshold;
     public int breakPoint;
 
-    // this is a "Unity dictionary"
-    public List<string> summonableStates; // states that you can be summoned during
-    public List<float> summonableTimeDuringState; // time during state that you will be summoned
-    
+    public List<Battle> battles;
 }
 

@@ -19,11 +19,5 @@ MonoBehaviour:
   greatThreshold: 20
   goodThreshold: 10
   breakPoint: 2
-  summonableStates:
-  - Gather
-  - Cook
-  - Cook
-  summonableTimeDuringState:
-  - 10
-  - 10
-  - 10
+  battles:
+  - {fileID: 0}

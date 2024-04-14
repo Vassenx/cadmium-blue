@@ -52,6 +52,11 @@ public class SummonState : BasePlayerState
         {
             return;
         }
+
+        if (sceneName.Equals("Human"))
+        {
+            GlobalManager.Instance.curBattleIndex++;
+        }
         
         GlobalManager.Instance.GetPlayer().GetStateMachine().ChangeState(nextState);
         ResetUIAfterLoad();
