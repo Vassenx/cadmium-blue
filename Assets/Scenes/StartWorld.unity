@@ -290,7 +290,6 @@ MonoBehaviour:
   Menu:
   - {fileID: 11400000, guid: 67c1bde21082f4564a76aa7de725a35d, type: 2}
   - {fileID: 11400000, guid: f475b8146423ba24a9c4144293d52f1f, type: 2}
-  - {fileID: 11400000, guid: f2799a799dad78b4785193336ae796bc, type: 2}
   AtHome: 1
   player: {fileID: 1439412955}
   cookTimer: {fileID: 854413958}
@@ -1310,7 +1309,7 @@ SpriteRenderer:
   m_Size: {x: 2, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1439412952
