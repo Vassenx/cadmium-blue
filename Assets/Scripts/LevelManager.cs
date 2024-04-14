@@ -13,6 +13,16 @@ public class LevelManager : MonoBehaviour
     
     private bool hasStarted = false;
 
+    public List<AudioClip> HumanSongs;
+
+    public List<AudioClip> DemonSongs;
+
+    [SerializeField]
+    private AudioSource audioSource;
+
+    private int currentIterationHuman = 0;
+    private int currentIterationDemon = 0;
+
     #region singleton
     private void Awake()
     {
@@ -44,10 +54,16 @@ public class LevelManager : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name.Equals("Demon"))
         {
+            audioSource.clip = HumanSongs[currentIterationHuman%HumanSongs.Count];
+            currentIterationHuman++;
+            audioSource.Play();
             StartCoroutine(LoadAsyncScene("Human"));
         }
         else if(SceneManager.GetActiveScene().name.Equals("Human"))
         {
+            audioSource.clip = DemonSongs[currentIterationDemon%DemonSongs.Count];
+            currentIterationDemon++;
+            audioSource.Play();
             StartCoroutine(LoadAsyncScene("Demon"));
         }
     }
