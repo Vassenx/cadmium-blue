@@ -49,7 +49,7 @@ public class EnemyActionController : MonoBehaviour
         //isAttacking = true;
         //janky but acceptable for a gamejam
         float angle = ReturnAngle();
-        Debug.Log(angle);
+        //Debug.Log(angle);
 
         if (angle <= 225 && angle > 135)
         {
