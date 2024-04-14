@@ -30,7 +30,7 @@ public class CombatController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0) && !inAttackingMotion)
         {
-            Debug.Log(GetMouseOrientation());
+            //Debug.Log(GetMouseOrientation());
             float angle = GetMouseOrientation();
             if (angle < 40 && angle > -20)
             {
