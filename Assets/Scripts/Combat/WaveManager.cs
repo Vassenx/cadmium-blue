@@ -37,7 +37,7 @@ public class WaveManager : MonoBehaviour
         
         foreach (var enemy in curWave.enemyListToSpawn)
         {
-            Instantiate(enemy, enemy.spawnPoint, Quaternion.identity);
+            Instantiate(enemy.prefab, enemy.spawnPoint, Quaternion.identity);
         }
     }
 

@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3d0e8d73739c43eba7ef24fe747b78f, type: 3}
   m_Name: Enemy1
   m_EditorClassIdentifier: 
+  prefab: {fileID: 525989728867175094, guid: 0a475e8e2995f8c4dad86275dc9d7278, type: 3}
   hitPoints: 1
   speed: 5
   spawnPoint: {x: 0, y: 0, z: 0}
+  playerStunTime: 0
+  pushBackAmount: 0
