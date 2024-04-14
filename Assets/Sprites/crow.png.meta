@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: MagpieFlySpriteSheet_0
+      name: crow_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 83a5487970f1f704ea950b6511961394
-      internalID: -650234936
+      spriteID: 81d8a85d716b3b543b3bde5bd2534140
+      internalID: -962361795
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MagpieFlySpriteSheet_1
+      name: crow_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6243ef7ddc0ee944961a6441793f031
+      internalID: 617399572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crow_2
       rect:
         serializedVersion: 2
         x: 32
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,20 +166,41 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a782e7a602fb8654d8351f36ca3cae45
-      internalID: -1726093801
+      spriteID: d724c5f11814ebd4e8f9585ba2270a8a
+      internalID: 1719651412
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MagpieFlySpriteSheet_2
+      name: crow_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8bd22e70403b5429942ad9cb3fdcd8
+      internalID: -1993069506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: crow_4
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -166,20 +208,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3815bb8cf4e477499d2de45602312a4
-      internalID: 115578846
+      spriteID: cbadc8fc1b93ae54f9466a8c0e4b3075
+      internalID: 635812782
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: MagpieFlySpriteSheet_3
+      name: crow_5
       rect:
         serializedVersion: 2
-        x: 96
+        x: 80
         y: 0
-        width: 32
-        height: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -187,50 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 830fcff5ef153244587e70b29e4c9aae
-      internalID: 2134129414
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MagpieFlySpriteSheet_4
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b10921a88a3cf2b4abb3eabe118b6047
-      internalID: 998314220
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: MagpieFlySpriteSheet_5
-      rect:
-        serializedVersion: 2
-        x: 160
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0e997f5c773f5434fb52b2631710172b
-      internalID: 1702335349
+      spriteID: 480a2a9010b55794eb5ba967a5cedeef
+      internalID: 1998821657
       vertices: []
       indices: 
       edges: []
@@ -246,12 +246,12 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      MagpieFlySpriteSheet_0: -650234936
-      MagpieFlySpriteSheet_1: -1726093801
-      MagpieFlySpriteSheet_2: 115578846
-      MagpieFlySpriteSheet_3: 2134129414
-      MagpieFlySpriteSheet_4: 998314220
-      MagpieFlySpriteSheet_5: 1702335349
+      crow_0: -962361795
+      crow_1: 617399572
+      crow_2: 1719651412
+      crow_3: -1993069506
+      crow_4: 635812782
+      crow_5: 1998821657
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
