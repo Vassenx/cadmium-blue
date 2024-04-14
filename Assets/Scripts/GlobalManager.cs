@@ -16,6 +16,8 @@ public class GlobalManager : MonoBehaviour
   [SerializeField] private Player player;
   [SerializeField] private CookTimer cookTimer;
   private List<BasePlayerState> states;
+
+  public int curBattleIndex = -1;
   
   void Awake()
   {
@@ -73,6 +75,11 @@ public class GlobalManager : MonoBehaviour
       {
           var timer = GameObject.FindObjectOfType<CookTimer>();
           timer.StartTimer(2f, 5f, 45f);
+      }
+
+      if (Input.GetKeyDown(KeyCode.B))
+      {
+          GameObject.FindObjectOfType<WaveManager>().OnEnemyDeath();
       }
   }
 }

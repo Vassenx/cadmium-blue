@@ -9,15 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d89ffe5c4751242a6a8a6b7f877cc2bf, type: 3}
-  m_Name: Eggs
+  m_Script: {fileID: 11500000, guid: f3d0e8d73739c43eba7ef24fe747b78f, type: 3}
+  m_Name: Enemy1
   m_EditorClassIdentifier: 
-  dishName: Eggs
-  gatherLocation: {x: 5, y: 5}
-  prepLocation: {x: -5, y: -5}
-  cookTime: 30
-  greatThreshold: 20
-  goodThreshold: 10
-  breakPoint: 2
-  battles:
-  - {fileID: 0}
+  hitPoints: 1
+  speed: 5
+  spawnPoint: {x: 0, y: 0, z: 0}

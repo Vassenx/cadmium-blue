@@ -8,5 +8,6 @@ public class FinishMealState  : BasePlayerState
     public override void Enter()
     {
         base.Enter();
+        GlobalManager.Instance.curBattleIndex = -1;
     }
 }

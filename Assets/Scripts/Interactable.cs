@@ -63,6 +63,9 @@ public class Interactable : MonoBehaviour
                 }
                 cookTimer.EndTimer();
                 break;
+            case "Boss":
+                GlobalManager.Instance.GetPlayer().GetStateMachine().ChangeState(manager.GetStateByName("FinishMeal"));
+                break;
             default:
                 break;
         }
