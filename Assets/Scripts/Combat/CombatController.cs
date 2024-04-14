@@ -59,11 +59,11 @@ public class CombatController : MonoBehaviour
         }
     }
 
-    void TakeDamage()
+    public void TakeDamage()
     {
         //player will lose time
         isHurt = true;
-        WaitForFlinch(hurtTime);
+        StartCoroutine(WaitForFlinch(hurtTime));
     }
 
     IEnumerator WaitForFlinch(float wait)

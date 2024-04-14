@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: NakedMan
   m_EditorClassIdentifier: 
   hitPoints: 1
-  speed: 8
+  speed: 3
   spawnPoint: {x: 0, y: 0, z: 0}
   playerStunTime: 0.5
   pushBackAmount: 15
