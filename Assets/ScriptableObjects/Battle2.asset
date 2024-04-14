@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Battle2
   m_EditorClassIdentifier: 
   summonableState: cooking
-  summonableTimeDuringState: 3
+  summonableTimeDuringState: 5
   waves:
   - {fileID: 11400000, guid: 54467b29d62967c41b4d18d3c3194890, type: 2}
   - {fileID: 11400000, guid: 71e89d00a9298174d8faec44e75b1777, type: 2}

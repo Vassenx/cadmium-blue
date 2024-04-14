@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Battle1
   m_EditorClassIdentifier: 
   summonableState: Gather
-  summonableTimeDuringState: 2
+  summonableTimeDuringState: 5
   waves:
   - {fileID: 11400000, guid: 0de5b5b294590b84e872b02b937e3904, type: 2}
   - {fileID: 11400000, guid: 0de5b5b294590b84e872b02b937e3904, type: 2}
