@@ -54,7 +54,7 @@ public class MainMenuController : MonoBehaviour
 
     void Update() {
         if (Input.GetKey(KeyCode.E)) {
-            if (inStart) SceneManager.LoadScene(0);
+            if (inStart) SceneManager.LoadScene("StartWorld");
             else if (inSettings) canvas.gameObject.transform.GetChild(2).gameObject.SetActive(true);
             else if (inCredits) StartCoroutine(ScrollToCredits());
         }
@@ -80,7 +80,7 @@ public class MainMenuController : MonoBehaviour
             other.gameObject.transform.GetChild(1).gameObject.SetActive(false);
         if (other.name == "Start") inStart = false;
         if (other.name == "Credits"){
-            if (second.anchoredPosition.y == 60) {
+            if (second.anchoredPosition.y == 250) {
                 StartCoroutine(ScrollToCredits());
             }
             inCredits = false;
@@ -97,15 +97,15 @@ public class MainMenuController : MonoBehaviour
     IEnumerator ScrollToCredits() {
         inCredits = false;
         scrolled = true;
-        for (var i = 0; i < 115; i++) {
-            first.anchoredPosition = new Vector2(first.anchoredPosition.x, first.anchoredPosition.y+5);
-            second.anchoredPosition = new Vector2(second.anchoredPosition.x, second.anchoredPosition.y+5);
+        for (var i = 0; i < 100; i++) {
+            first.anchoredPosition = new Vector2(first.anchoredPosition.x, first.anchoredPosition.y+10);
+            second.anchoredPosition = new Vector2(second.anchoredPosition.x, second.anchoredPosition.y+10);
             yield return new WaitForSeconds(0.05f);
         }
         inCredits = true;
-        if (second.anchoredPosition.y >= 635) {
-            first.anchoredPosition = new Vector2(first.anchoredPosition.x, 150);
-            second.anchoredPosition = new Vector2(second.anchoredPosition.x, -515);
+        if (second.anchoredPosition.y >= 1250) {
+            first.anchoredPosition = new Vector2(first.anchoredPosition.x, 300);
+            second.anchoredPosition = new Vector2(second.anchoredPosition.x, -750);
         }
     }     
 
