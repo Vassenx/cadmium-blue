@@ -38,6 +38,36 @@ public class LevelManager : MonoBehaviour
             StartCoroutine(LoadAsyncScene("Demon"));
             hasStarted = true;
         }
+        
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (Time.timeScale == 0)
+            {
+                Time.timeScale = 1;
+            }
+            else
+            {
+                Time.timeScale = 0;
+            }
+        }
+        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            var a = GameObject.FindObjectOfType<CameraController>().gameObject;
+            var b = GameObject.FindObjectOfType<PlayerMovement>().gameObject;
+            var c = GameObject.FindObjectOfType<GlobalManager>().gameObject;
+            Destroy(a);
+            Destroy(b);
+            Destroy(c);
+            Destroy(persistentCanvas.gameObject);
+            SceneManager.LoadScene("Main Menu");
+            Destroy(gameObject);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Application.Quit();
+        }
     }
 
     public void SwitchWorlds()
