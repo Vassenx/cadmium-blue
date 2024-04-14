@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: ff6122ccb1a557e4582dfb9f2eeaa5d7
+=======
+guid: 6660a64f4012eca41ac7bca6cd51310a
+>>>>>>> main
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,9 +52,15 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
+=======
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+>>>>>>> main
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -69,7 +79,11 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
+<<<<<<< HEAD
     maxTextureSize: 16384
+=======
+    maxTextureSize: 2048
+>>>>>>> main
     resizeAlgorithm: 0
     textureFormat: 4
     textureCompression: 1
@@ -93,6 +107,22 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
+=======
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+>>>>>>> main
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -101,18 +131,31 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+<<<<<<< HEAD
         y: 384
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+=======
+        y: 64
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+>>>>>>> main
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: b434eea655ecf3d41b7dd835ec9f2611
       internalID: 548769737
+=======
+      spriteID: 1bde5a5865a6cbc4f9b3ea57f759dd0a
+      internalID: -1801606385
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -121,19 +164,33 @@ TextureImporter:
       name: Tiles64_1
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 64
         y: 384
         width: 64
         height: 64
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+=======
+        x: 0
+        y: 256
+        width: 192
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+>>>>>>> main
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 0ecc9607abcb27e468469d2bb6143b15
       internalID: -687544337
+=======
+      spriteID: 72f61a60d96c25b4ab0498bdbd31c5b3
+      internalID: 118581215
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -142,6 +199,7 @@ TextureImporter:
       name: Tiles64_2
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 128
         y: 384
         width: 64
@@ -478,6 +536,8 @@ TextureImporter:
       name: Tiles64_18
       rect:
         serializedVersion: 2
+=======
+>>>>>>> main
         x: 192
         y: 384
         width: 64
@@ -489,8 +549,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 65a486a9c84593e4b90df7ae5c878afe
       internalID: -219496648
+=======
+      spriteID: 22b38c4f6408ee247b8d26fbb39c6749
+      internalID: 1973188228
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -506,6 +571,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<< HEAD
       Tiles64_0: 548769737
       Tiles64_1: -687544337
       Tiles64_10: -408306251
@@ -525,6 +591,11 @@ TextureImporter:
       Tiles64_7: 2056052268
       Tiles64_8: -2019582699
       Tiles64_9: 1262041333
+=======
+      Tiles64_0: -1801606385
+      Tiles64_1: 118581215
+      Tiles64_2: 1973188228
+>>>>>>> main
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

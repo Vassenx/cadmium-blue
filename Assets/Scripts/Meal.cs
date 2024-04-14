@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Numerics;
 using UnityEngine;
+using UnityEngine.UI;
 
 [CreateAssetMenu(fileName = "Data", menuName = "StevenTypes/Meal", order = 1)]
 public class Meal : ScriptableObject{
@@ -12,5 +13,7 @@ public class Meal : ScriptableObject{
     public float greatThreshold;
     public float goodThreshold;
     public int breakPoint;
+
+    public List<Battle> battles;
 }
 

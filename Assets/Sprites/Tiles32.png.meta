@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 2329f339fbbfb0049a4a01a3e4213683
+=======
+guid: 974a1741d9b98f741996a72e72d5a0ad
+>>>>>>> main
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,9 +52,15 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
+<<<<<<< HEAD
   spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
+=======
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+>>>>>>> main
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -69,7 +79,11 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
+<<<<<<< HEAD
     maxTextureSize: 16384
+=======
+    maxTextureSize: 2048
+>>>>>>> main
     resizeAlgorithm: 0
     textureFormat: 4
     textureCompression: 1
@@ -93,6 +107,22 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
+=======
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+>>>>>>> main
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -100,19 +130,33 @@ TextureImporter:
       name: Tiles32_0
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 0
         y: 468
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+=======
+        x: 12
+        y: 408
+        width: 104
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+>>>>>>> main
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: ddd24e635d3ca6446876053a64eb27d3
       internalID: -1698686476
+=======
+      spriteID: cbf6af32986472e4f8d03d45c542fcdf
+      internalID: 1611783850
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -121,19 +165,33 @@ TextureImporter:
       name: Tiles32_1
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 32
         y: 468
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+=======
+        x: 128
+        y: 340
+        width: 224
+        height: 160
+      alignment: 0
+      pivot: {x: 0, y: 0}
+>>>>>>> main
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 12bb0afc10b0c894a913b4a88632dfca
       internalID: -1378838010
+=======
+      spriteID: cd302c08ebf82324e81b286df1268c75
+      internalID: 1622289291
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -142,19 +200,33 @@ TextureImporter:
       name: Tiles32_2
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 64
         y: 468
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+=======
+        x: 12
+        y: 312
+        width: 104
+        height: 81
+      alignment: 0
+      pivot: {x: 0, y: 0}
+>>>>>>> main
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: d8da0283de2f70440b9658512b7733d0
       internalID: 80323910
+=======
+      spriteID: 3d5ce7dd5843d7348ae862f849cd7be3
+      internalID: -1554625106
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -163,19 +235,33 @@ TextureImporter:
       name: Tiles32_3
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 96
         y: 468
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+=======
+        x: 235
+        y: 325
+        width: 23
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+>>>>>>> main
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 9ee0ed0c5abe87a488550b1cf1de5ae9
       internalID: 401746759
+=======
+      spriteID: 35f93375cc29e8446a823e71659fdd37
+      internalID: 542299283
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -184,19 +270,33 @@ TextureImporter:
       name: Tiles32_4
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 128
         y: 468
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+=======
+        x: 260
+        y: 327
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+>>>>>>> main
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 42caccfb2d1c6c4458e36a1d6f978b43
       internalID: -1872430535
+=======
+      spriteID: ed5d7e5858fd7ab4993c8384c104bca0
+      internalID: 686189818
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -205,19 +305,33 @@ TextureImporter:
       name: Tiles32_5
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 160
         y: 468
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+=======
+        x: 239
+        y: 311
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+>>>>>>> main
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 9a74ef3c7920630449be9c03ed8dbe56
       internalID: -839152536
+=======
+      spriteID: f4ed0516f16ae584ea19b91099dd38dc
+      internalID: 996753859
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -226,19 +340,33 @@ TextureImporter:
       name: Tiles32_6
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 192
         y: 468
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+=======
+        x: 253
+        y: 311
+        width: 16
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+>>>>>>> main
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 6391372f60b7d1f4893335f397985654
       internalID: 584113593
+=======
+      spriteID: f4cd8467e38136f439cae634335eb154
+      internalID: 228357169
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -247,19 +375,33 @@ TextureImporter:
       name: Tiles32_7
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 224
         y: 468
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+=======
+        x: 12
+        y: 152
+        width: 136
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+>>>>>>> main
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 2f5bfcdf52ca8764ba95ac50ee1d690c
       internalID: 1966859782
+=======
+      spriteID: 6dfaf37a484166146a31c926c78e48d3
+      internalID: 175017688
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -268,19 +410,33 @@ TextureImporter:
       name: Tiles32_8
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 256
         y: 468
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+=======
+        x: 160
+        y: 254
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+>>>>>>> main
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: a5a69259dd2de7c44a88ae7444daaeb4
       internalID: -1061048257
+=======
+      spriteID: a12d8210ad7c33e48a7b2843614714c5
+      internalID: -2108992682
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -289,19 +445,33 @@ TextureImporter:
       name: Tiles32_9
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 288
         y: 468
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+=======
+        x: 202
+        y: 254
+        width: 22
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+>>>>>>> main
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 8fb6e261660d771498d5bc6a03b5a21d
       internalID: 1419231763
+=======
+      spriteID: 2873c5cd20dca264a9aaa2505031213e
+      internalID: -809806401
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -310,19 +480,33 @@ TextureImporter:
       name: Tiles32_10
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 320
         y: 468
         width: 32
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+=======
+        x: 160
+        y: 212
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+>>>>>>> main
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 2a7a3a3dc51799d478a33f4d7d27f3a7
       internalID: 1943084994
+=======
+      spriteID: 317d681c27e201442af84fa84173af4d
+      internalID: 1843559571
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -331,6 +515,7 @@ TextureImporter:
       name: Tiles32_11
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 0
         y: 436
         width: 32
@@ -1366,11 +1551,20 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
+=======
+        x: 208
+        y: 212
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+>>>>>>> main
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 45a3d412e1a27604d8884562402d7db6
       internalID: 1384998679
       vertices: []
@@ -1583,6 +1777,10 @@ TextureImporter:
       bones: []
       spriteID: 4375d8bb9a01b5546b0130ae2cbda8c2
       internalID: -1453787567
+=======
+      spriteID: 9c252eb69260c0b4f8596ab47d84db08
+      internalID: -133319088
+>>>>>>> main
       vertices: []
       indices: 
       edges: []
@@ -1598,6 +1796,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+<<<<<<< HEAD
       Tiles32_0: -1698686476
       Tiles32_1: -1378838010
       Tiles32_10: 1943084994
@@ -1681,6 +1880,20 @@ TextureImporter:
       Tiles32_81: 1707518324
       Tiles32_82: -1453787567
       Tiles32_9: 1419231763
+=======
+      Tiles32_0: 1611783850
+      Tiles32_1: 1622289291
+      Tiles32_10: 1843559571
+      Tiles32_11: -133319088
+      Tiles32_2: -1554625106
+      Tiles32_3: 542299283
+      Tiles32_4: 686189818
+      Tiles32_5: 996753859
+      Tiles32_6: 228357169
+      Tiles32_7: 175017688
+      Tiles32_8: -2108992682
+      Tiles32_9: -809806401
+>>>>>>> main
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -11,7 +11,7 @@ public class CookTimer : MonoBehaviour
     
     private bool isRunning = false;
     
-    private float curTime;
+    public float curTime { get; private set; }
     private float cookedTime;
     private float overcookedTime;
     private float totalTime; // burnt time
