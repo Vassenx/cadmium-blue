@@ -634,6 +634,50 @@ PrefabInstance:
       propertyPath: persistentCanvas
       value: 
       objectReference: {fileID: 1375592916}
+    - target: {fileID: 1167556303497056419, guid: 562a14a414a177746afd98692d3921da, type: 3}
+      propertyPath: DemonSongs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167556303497056419, guid: 562a14a414a177746afd98692d3921da, type: 3}
+      propertyPath: HumanSongs.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1167556303497056419, guid: 562a14a414a177746afd98692d3921da, type: 3}
+      propertyPath: DemonSongs.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 973d76c2cea2152498f5aa3c2521fa10, type: 3}
+    - target: {fileID: 1167556303497056419, guid: 562a14a414a177746afd98692d3921da, type: 3}
+      propertyPath: DemonSongs.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: deb6c0e6f955581478e90cdc723e089a, type: 3}
+    - target: {fileID: 1167556303497056419, guid: 562a14a414a177746afd98692d3921da, type: 3}
+      propertyPath: DemonSongs.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: f2fe9c08a62f3534d86561b48b4653d1, type: 3}
+    - target: {fileID: 1167556303497056419, guid: 562a14a414a177746afd98692d3921da, type: 3}
+      propertyPath: HumanSongs.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: f9d5cdffcc820bd48931bf73f896c614, type: 3}
+    - target: {fileID: 1167556303497056419, guid: 562a14a414a177746afd98692d3921da, type: 3}
+      propertyPath: HumanSongs.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: d7c4b3a5b08cc5e4fb8331dfad012038, type: 3}
+    - target: {fileID: 1167556303497056419, guid: 562a14a414a177746afd98692d3921da, type: 3}
+      propertyPath: HumanSongs.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e90a22019559b040a71bb69967359d4, type: 3}
+    - target: {fileID: 1167556303497056419, guid: 562a14a414a177746afd98692d3921da, type: 3}
+      propertyPath: HumanSongs.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: f9d5cdffcc820bd48931bf73f896c614, type: 3}
+    - target: {fileID: 1167556303497056419, guid: 562a14a414a177746afd98692d3921da, type: 3}
+      propertyPath: HumanSongs.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: d7c4b3a5b08cc5e4fb8331dfad012038, type: 3}
+    - target: {fileID: 1167556303497056419, guid: 562a14a414a177746afd98692d3921da, type: 3}
+      propertyPath: HumanSongs.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5e90a22019559b040a71bb69967359d4, type: 3}
     - target: {fileID: 2250981974726879767, guid: 562a14a414a177746afd98692d3921da, type: 3}
       propertyPath: player
       value: 
