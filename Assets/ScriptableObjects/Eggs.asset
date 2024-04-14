@@ -20,4 +20,4 @@ MonoBehaviour:
   goodThreshold: 10
   breakPoint: 2
   battles:
-  - {fileID: 0}
+  - {fileID: 11400000, guid: d55347fabc21ef142b61a8410fa92ff6, type: 2}

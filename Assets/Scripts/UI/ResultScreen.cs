@@ -32,7 +32,7 @@ public class ResultScreen : MonoBehaviour
             GlobalManager.Instance.ShowResultScreen(GlobalManager.Instance.Menu[0]);
         }
 #endif
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.E)&& resultScreenCanvas.enabled)
         {
             canExitScreen = true;
         }
@@ -45,10 +45,10 @@ public class ResultScreen : MonoBehaviour
         
         qualityText.text = qualityString[resultValue];
         
+        //Stop updating gamestate 
+        GlobalManager.Instance.GetPlayer().GetStateMachine().PauseState = true;
         while (!canExitScreen)
         {
-            //Stop updating gamestate not the  
-            GlobalManager.Instance.GetPlayer().GetStateMachine().PauseState = true;
             yield return null;
         }
         GlobalManager.Instance.GetPlayer().GetStateMachine().PauseState = false;

@@ -289,9 +289,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Menu:
   - {fileID: 11400000, guid: 67c1bde21082f4564a76aa7de725a35d, type: 2}
+  - {fileID: 11400000, guid: f475b8146423ba24a9c4144293d52f1f, type: 2}
   AtHome: 1
   player: {fileID: 1439412955}
   cookTimer: {fileID: 854413958}
+  resultScreen: {fileID: 1982334043}
   curBattleIndex: -1
 --- !u!4 &402746336
 Transform:
@@ -306,7 +308,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2084645123}
+  - {fileID: 1982334044}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &402746337
@@ -1388,6 +1390,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   firstState: {fileID: 227437570}
+  PauseState: 0
 --- !u!114 &1439412955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1807,7 +1810,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1001 &2084645121
+--- !u!1001 &1982334042
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1864,10 +1867,10 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 548154895d5389c4383b20f45b6641f4, type: 3}
---- !u!114 &2084645122 stripped
+--- !u!114 &1982334043 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7829183389271562813, guid: 548154895d5389c4383b20f45b6641f4, type: 3}
-  m_PrefabInstance: {fileID: 2084645121}
+  m_PrefabInstance: {fileID: 1982334042}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -1875,10 +1878,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 064117cb6d2370b4985c6f88023f72bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &2084645123 stripped
+--- !u!4 &1982334044 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2692710980358838017, guid: 548154895d5389c4383b20f45b6641f4, type: 3}
-  m_PrefabInstance: {fileID: 2084645121}
+  m_PrefabInstance: {fileID: 1982334042}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &135791786740517843
 MonoBehaviour:
