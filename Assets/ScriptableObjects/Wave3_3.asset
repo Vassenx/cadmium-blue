@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Wave3_3
   m_EditorClassIdentifier: 
   enemyListToSpawn:
-  - {fileID: 11400000, guid: e5b4e17221e99e74bb102925554c4188, type: 2}
-  - {fileID: 11400000, guid: e5b4e17221e99e74bb102925554c4188, type: 2}
-  - {fileID: 11400000, guid: e5b4e17221e99e74bb102925554c4188, type: 2}
-  - {fileID: 11400000, guid: e5b4e17221e99e74bb102925554c4188, type: 2}
+  - {fileID: 11400000, guid: 9aae41f838f1f45cd98e3dd2066381ee, type: 2}
+  - {fileID: 11400000, guid: 44785de5500094c7f82f20b063aa6186, type: 2}
+  - {fileID: 11400000, guid: d3383d55f70974976b848e26192ebc6f, type: 2}
+  - {fileID: 11400000, guid: 989511018a7a843fdbc560a650566cfe, type: 2}
