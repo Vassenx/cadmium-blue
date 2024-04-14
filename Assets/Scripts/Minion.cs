@@ -41,7 +41,15 @@ public class Minion : MonoBehaviour
 
     public void Die()
     {
+        WaveManager wavemanager = GameObject.FindObjectOfType<WaveManager>(); //hacky
+        wavemanager.OnEnemyDeath();
+
+        RandomizeSoundClipPlays audioScript = GetComponent<RandomizeSoundClipPlays>();
+        audioScript.StartAudio();
+        
         //play some animation
+        
+        
         Destroy(gameObject);
         
     }

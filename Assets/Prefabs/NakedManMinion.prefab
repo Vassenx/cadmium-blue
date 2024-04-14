@@ -109,6 +109,8 @@ GameObject:
   - component: {fileID: 2628318259538617466}
   - component: {fileID: 7898696704738169076}
   - component: {fileID: 2570242415662153440}
+  - component: {fileID: 6456013849001789439}
+  - component: {fileID: 2019360144168332698}
   m_Layer: 0
   m_Name: NakedManMinion
   m_TagString: Enemy
@@ -287,6 +289,134 @@ CircleCollider2D:
   m_Offset: {x: 0, y: -0.2}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!82 &6456013849001789439
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717239433042527447}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 7299737825278223426, guid: 8e0f7a7c82e57854d92353343cf3a9bd, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &2019360144168332698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717239433042527447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759996c2b9eb3144fb1981ef29f79517, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 6456013849001789439}
+  clips:
+  - {fileID: 8300000, guid: 3eb54b282e1695242aa41d471cf61348, type: 3}
+  - {fileID: 8300000, guid: 038263015a968a84e812234ac79e1e9f, type: 3}
+  - {fileID: 8300000, guid: 6639e3cd61fec1a48841d1fb95b6a787, type: 3}
+  - {fileID: 8300000, guid: 03a2301df71690c469cc9a49e1bd8116, type: 3}
+  - {fileID: 8300000, guid: 4a73f241440acd44189a4116a78b9b62, type: 3}
+  - {fileID: 8300000, guid: f3faa68e7bd2f2644b4375a0c492e840, type: 3}
+  - {fileID: 8300000, guid: 4aca3fa0be73d39438c26b7d66b835ff, type: 3}
+  - {fileID: 8300000, guid: a35df24603034634ca932b0b2e7f64c7, type: 3}
+  - {fileID: 8300000, guid: 77ebe309f05652547b262883d8356763, type: 3}
+  - {fileID: 8300000, guid: 8f2e3a19e69178347948e33f300187e8, type: 3}
+  - {fileID: 8300000, guid: 675d5b8bb742179478a0b8d73348fadd, type: 3}
+  - {fileID: 8300000, guid: baa784feda98817429137c6b759115de, type: 3}
+  - {fileID: 8300000, guid: 556921e2bb1e90544919d45e7b66ea41, type: 3}
+  - {fileID: 8300000, guid: 3b9e2f28c85d7144ca4f0a9197c5084a, type: 3}
+  - {fileID: 8300000, guid: 0a1b0960e8a8ac540b61a26f5307105f, type: 3}
+  - {fileID: 8300000, guid: 991f1401af5ce764c9d84563c8b570bb, type: 3}
+  - {fileID: 8300000, guid: 2cfdfc71319df8149b86171915bcb120, type: 3}
+  playOnAwake: 0
 --- !u!1 &4041704213786477859
 GameObject:
   m_ObjectHideFlags: 0
