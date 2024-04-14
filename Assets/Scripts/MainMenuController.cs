@@ -6,17 +6,26 @@ using UnityEngine.SceneManagement;
 public class MainMenuController : MonoBehaviour
 {
     Rigidbody2D rb;
+    Animator anim;
     bool inStart = false;
     bool inCredits = false;
     bool scrolled = false;
+    bool inSettings = false;
     public Canvas canvas;
     RectTransform first;
     RectTransform second;
+    public AnimationClip leftWalk;
+    public AnimationClip leftIdle;
+    public AnimationClip rightWalk;
+    public AnimationClip rightIdle;
+    public AnimationClip upIdle;
+    bool lastRight = true;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
         first = canvas.gameObject.transform.GetChild(0).GetComponent<RectTransform>();
         second = canvas.gameObject.transform.GetChild(1).GetComponent<RectTransform>();
     }
@@ -25,16 +34,33 @@ public class MainMenuController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A)) {
             rb.velocity = new Vector2(-300 * Time.deltaTime, 0);
+            anim.Play(leftWalk.name);
+            lastRight = false;
         }
         else if (Input.GetKey(KeyCode.D)) {
             rb.velocity = new Vector2(300 * Time.deltaTime, 0);
+            anim.Play(rightWalk.name);
+            lastRight = true;
         }
-        else rb.velocity = Vector2.zero;
+        else if (Input.GetKey(KeyCode.E)) {
+            anim.Play(upIdle.name);
+        }
+        else {
+            if (lastRight) anim.Play(rightIdle.name);
+            else anim.Play(leftIdle.name);
+            rb.velocity = Vector2.zero;
+        }
     }
 
     void Update() {
-        if (inStart && Input.GetKey(KeyCode.E)) SceneManager.LoadScene(0);
-        if (inCredits && !scrolled && Input.GetKey(KeyCode.E)) StartCoroutine(ScrollToCredits());
+        if (Input.GetKey(KeyCode.E)) {
+            if (inStart) SceneManager.LoadScene(0);
+            if (inCredits) StartCoroutine(ScrollToCredits());
+            if (inSettings) canvas.gameObject.transform.GetChild(2).gameObject.SetActive(true);
+        }
+        if (Input.GetKey(KeyCode.Escape) && canvas.gameObject.transform.GetChild(2).gameObject.activeSelf) {
+            canvas.gameObject.transform.GetChild(2).gameObject.SetActive(false);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
@@ -42,7 +68,11 @@ public class MainMenuController : MonoBehaviour
             other.gameObject.transform.GetChild(0).gameObject.SetActive(true);
             other.gameObject.transform.GetChild(1).gameObject.SetActive(true);
         if (other.name == "Start") inStart = true;
-        if (other.name == "Credits") inCredits = true;
+        if (other.name == "Credits") {
+            scrolled = false;
+            inCredits = true;
+        }
+        if (other.name == "Settings") inSettings = true;
     }
     void OnTriggerExit2D(Collider2D other) {
         if (other.gameObject.transform.childCount > 0)
@@ -55,6 +85,7 @@ public class MainMenuController : MonoBehaviour
             }
             inCredits = false;
         }
+        if (other.name == "Settings") inSettings = false;
     }
 
     IEnumerator StartGame() {
@@ -65,16 +96,20 @@ public class MainMenuController : MonoBehaviour
 
     IEnumerator ScrollToCredits() {
         inCredits = false;
-        scrolled = !scrolled;
+        scrolled = true;
         for (var i = 0; i < 115; i++) {
             first.anchoredPosition = new Vector2(first.anchoredPosition.x, first.anchoredPosition.y+5);
             second.anchoredPosition = new Vector2(second.anchoredPosition.x, second.anchoredPosition.y+5);
             yield return new WaitForSeconds(0.05f);
         }
         inCredits = true;
-        if (!scrolled) {
-            first.anchoredPosition = new Vector2(first.anchoredPosition.x, first.anchoredPosition.y - 1150);
-            second.anchoredPosition = new Vector2(second.anchoredPosition.x, second.anchoredPosition.y - 1150);
+        if (second.anchoredPosition.y >= 635) {
+            first.anchoredPosition = new Vector2(first.anchoredPosition.x, 150);
+            second.anchoredPosition = new Vector2(second.anchoredPosition.x, -515);
         }
-    }                                                                                                                          
+    }     
+
+    public void QuitToDesktop() {
+        Application.Quit();
+    }                                                                                                                   
 }
