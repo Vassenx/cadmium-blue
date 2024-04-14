@@ -15,6 +15,7 @@ public class GlobalManager : MonoBehaviour
   public bool AtHome = true;
   [SerializeField] private Player player;
   [SerializeField] private CookTimer cookTimer;
+  [SerializeField] private ResultScreen resultScreen;
   private List<BasePlayerState> states;
   
   void Awake()
@@ -75,4 +76,11 @@ public class GlobalManager : MonoBehaviour
           timer.StartTimer(2f, 5f, 45f);
       }
   }
+
+  public void ShowResultScreen(Meal meal)
+  {
+      CompletedMeals.TryGetValue(meal, out int mealQuality);
+      StartCoroutine(resultScreen.ShowResultScreen(meal, mealQuality));
+  }
+    
 }
