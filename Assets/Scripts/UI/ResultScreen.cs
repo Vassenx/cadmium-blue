@@ -13,8 +13,7 @@ public class ResultScreen : MonoBehaviour
     private List<MealContainer> mealContainers;
     [SerializeField]
     private TMP_Text qualityText;
-    [SerializeField] 
-    private List<string> qualityString;
+    
     private bool canExitScreen;
 
     private int currentIndex;
@@ -46,7 +45,7 @@ public class ResultScreen : MonoBehaviour
         resultScreenCanvas.enabled = true;
         mealContainers[currentIndex].InitMeal(currentMeal,resultValue);
         currentIndex++;
-        qualityText.text = qualityString[resultValue];
+        qualityText.text = currentMeal.qualityString[resultValue];
         
         //Stop updating gamestate 
         GlobalManager.Instance.GetPlayer().GetStateMachine().PauseState = true;

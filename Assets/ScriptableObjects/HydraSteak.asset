@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: HydraSteak
   m_EditorClassIdentifier: 
   dishName: HydraSteak
-  gatherLocation: {x: 5, y: 5}
-  prepLocation: {x: -5, y: -5}
+  gatherLocation: {x: 10, y: 5}
+  prepLocation: {x: -5, y: 0}
   cookTime: 30
   greatThreshold: 20
   goodThreshold: 10
@@ -22,6 +22,13 @@ MonoBehaviour:
   battles:
   - {fileID: 11400000, guid: 0fcf8f99ba5fc5c41b4ade7b836d028b, type: 2}
   RawImage: {fileID: 1727658880, guid: 3aa59bc6c38313f4db6f106e82c35255, type: 3}
-  GoodImage: {fileID: 2067218103, guid: 3aa59bc6c38313f4db6f106e82c35255, type: 3}
-  GreatImage: {fileID: -1284070181, guid: 3aa59bc6c38313f4db6f106e82c35255, type: 3}
+  GoodImage: {fileID: -1284070181, guid: 3aa59bc6c38313f4db6f106e82c35255, type: 3}
+  GreatImage: {fileID: 2067218103, guid: 3aa59bc6c38313f4db6f106e82c35255, type: 3}
   OvercookedImage: {fileID: -1466295794, guid: 3aa59bc6c38313f4db6f106e82c35255, type: 3}
+  qualityString:
+  - Whew, that was quite the battle, but no problem - the steak is still raw. You
+    could serve it rare if you want to.
+  - AHH!! CURSES!!! My cake :''(( Why am I always called to slaughter when I'm baking??
+  - Errr, this steak is a little stringy... It'll have to do, I guess. Hopefully
+    desert makes up for it!
+  - Mmm, the perfect sear :) Back just in time! Dinner tonight is looking good.
