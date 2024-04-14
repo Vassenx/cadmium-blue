@@ -29,6 +29,7 @@ public class WaveManager : MonoBehaviour
         {
             // done with waves
             GlobalManager.Instance.GetPlayer().GetStateMachine().ChangeState(GlobalManager.Instance.GetStateByName("Boss"));
+            return;
         }
         
         curWave = battle.waves[waveIndex];
