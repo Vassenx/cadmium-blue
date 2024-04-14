@@ -55,8 +55,8 @@ public class MainMenuController : MonoBehaviour
     void Update() {
         if (Input.GetKey(KeyCode.E)) {
             if (inStart) SceneManager.LoadScene(0);
-            if (inCredits) StartCoroutine(ScrollToCredits());
-            if (inSettings) canvas.gameObject.transform.GetChild(2).gameObject.SetActive(true);
+            else if (inSettings) canvas.gameObject.transform.GetChild(2).gameObject.SetActive(true);
+            else if (inCredits) StartCoroutine(ScrollToCredits());
         }
         if (Input.GetKey(KeyCode.Escape) && canvas.gameObject.transform.GetChild(2).gameObject.activeSelf) {
             canvas.gameObject.transform.GetChild(2).gameObject.SetActive(false);
@@ -80,7 +80,7 @@ public class MainMenuController : MonoBehaviour
             other.gameObject.transform.GetChild(1).gameObject.SetActive(false);
         if (other.name == "Start") inStart = false;
         if (other.name == "Credits"){
-            if (scrolled) {
+            if (second.anchoredPosition.y == 60) {
                 StartCoroutine(ScrollToCredits());
             }
             inCredits = false;
