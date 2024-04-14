@@ -50,6 +50,7 @@ MonoBehaviour:
   Menu:
   - {fileID: 11400000, guid: 67c1bde21082f4564a76aa7de725a35d, type: 2}
   - {fileID: 11400000, guid: f475b8146423ba24a9c4144293d52f1f, type: 2}
+  - {fileID: 11400000, guid: f2799a799dad78b4785193336ae796bc, type: 2}
   AtHome: 1
   player: {fileID: 0}
   cookTimer: {fileID: 0}

@@ -47,16 +47,18 @@ public class Interactable : MonoBehaviour
                 break;
             case "FinishMeal":
                 int quality = 3;
-                if (cookTimer.curTime > currentMeal.greatThreshold) quality = 0;//raw
-                else if (cookTimer.curTime <= 0) quality = 1;//burnt
-                else if (cookTimer.curTime < currentMeal.goodThreshold) quality = 2; //good
-                else if (cookTimer.curTime < currentMeal.greatThreshold) quality = 3; //great
+                if (cookTimer.curTime > currentMeal.cookTime) quality = 0;//burnt
+                else if (cookTimer.curTime < currentMeal.goodThreshold) quality = 1;//raw
+                else if (cookTimer.curTime > currentMeal.goodThreshold && 
+                         cookTimer.curTime < currentMeal.greatThreshold) quality = 2; //good
+                else if (cookTimer.curTime > currentMeal.greatThreshold) quality = 3; //great
                 Debug.Log(quality);
 
                 if (!manager.CompletedMeals.ContainsKey(currentMeal))
                 {
                     manager.CompletedMeals.Add(currentMeal, quality);
                 }
+                manager.ShowResultScreen(currentMeal);
                 
                 if (manager.CompletedMeals.Count >= manager.Menu.Count)
                 {
@@ -65,10 +67,11 @@ public class Interactable : MonoBehaviour
                 }
                 else
                 {
+                    currentMeal = manager.Menu[manager.CompletedMeals.Count];
+                    transform.position = currentMeal.gatherLocation;
                     manager.GetPlayer().GetStateMachine().ChangeState(manager.GetStateByName("Gather"));
                 }
                 cookTimer.EndTimer();
-                manager.ShowResultScreen(currentMeal);
                 break;
             case "Boss":
                 GlobalManager.Instance.GetPlayer().GetStateMachine().ChangeState(manager.GetStateByName("FinishMeal"));

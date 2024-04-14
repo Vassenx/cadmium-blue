@@ -20,5 +20,7 @@ public class Meal : ScriptableObject{
     public Sprite GoodImage;
     public Sprite GreatImage;
     public Sprite OvercookedImage;
+    
+    public List<string> qualityString;
 }
 
