@@ -280,6 +280,8 @@ GameObject:
   - component: {fileID: 584169464}
   - component: {fileID: 584169463}
   - component: {fileID: 584169462}
+  - component: {fileID: 584169465}
+  - component: {fileID: 584169466}
   m_Layer: 5
   m_Name: Flame
   m_TagString: Untagged
@@ -370,6 +372,126 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 584169460}
   m_CullTransparentMesh: 1
+--- !u!82 &584169465
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584169460}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 7299737825278223426, guid: 8e0f7a7c82e57854d92353343cf3a9bd, type: 2}
+  m_audioClip: {fileID: 8300000, guid: 6cdb48dea26d52542a2bec0cd16a48d4, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!114 &584169466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584169460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 759996c2b9eb3144fb1981ef29f79517, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioSource: {fileID: 584169465}
+  clips:
+  - {fileID: 8300000, guid: 6cdb48dea26d52542a2bec0cd16a48d4, type: 3}
+  - {fileID: 8300000, guid: aafe3898e8d23f74cb19bf17645f3b43, type: 3}
+  - {fileID: 8300000, guid: 743e58332756e3a439eb1e5cb8d5a54f, type: 3}
+  - {fileID: 8300000, guid: 3d0617974ee0d154abd6c2f3e3306565, type: 3}
+  - {fileID: 8300000, guid: 413ec420d97b38a4c8084f0134395f2e, type: 3}
+  - {fileID: 8300000, guid: 79320b8c4fd402a45aa58a0941168c28, type: 3}
+  - {fileID: 8300000, guid: cac10818949e93a46b79810af1aa4290, type: 3}
+  - {fileID: 8300000, guid: 9e19f2a8bf6068e4b9093f6bb8cfd529, type: 3}
+  - {fileID: 8300000, guid: 79e3151e4a65f814ea0e154fcdc8eb91, type: 3}
+  playOnAwake: 1
 --- !u!1 &688155589
 GameObject:
   m_ObjectHideFlags: 0
@@ -520,6 +642,10 @@ PrefabInstance:
       propertyPath: cookTimer
       value: 
       objectReference: {fileID: 854413958}
+    - target: {fileID: 5926262410174791553, guid: 562a14a414a177746afd98692d3921da, type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 1662801937555511770, guid: 8e0f7a7c82e57854d92353343cf3a9bd, type: 2}
     - target: {fileID: 7295373627292940271, guid: 562a14a414a177746afd98692d3921da, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
