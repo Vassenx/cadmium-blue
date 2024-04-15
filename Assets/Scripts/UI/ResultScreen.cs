@@ -49,10 +49,7 @@ public class ResultScreen : MonoBehaviour
         
         //Stop updating gamestate 
         GlobalManager.Instance.GetPlayer().GetStateMachine().PauseState = true;
-        while (!canExitScreen)
-        {
-            yield return null;
-        }
+        yield return new WaitForSeconds(7f);
         GlobalManager.Instance.GetPlayer().GetStateMachine().PauseState = false;
 
         resultScreenCanvas.enabled = false;

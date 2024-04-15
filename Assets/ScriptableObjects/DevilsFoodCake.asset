@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: DevilsFoodCake
   m_EditorClassIdentifier: 
   dishName: DevilsFoodCake
-  gatherLocation: {x: 7, y: 6}
-  prepLocation: {x: 8, y: -3}
+  gatherLocation: {x: 7, y: -2}
+  prepLocation: {x: 1.5, y: 2}
   cookTime: 60
   greatThreshold: 40
-  goodThreshold: 20
+  goodThreshold: 30
   breakPoint: 2
   battles:
   - {fileID: 11400000, guid: 0fcf8f99ba5fc5c41b4ade7b836d028b, type: 2}
@@ -28,8 +28,8 @@ MonoBehaviour:
   qualityString:
   - Ah, look at the time! There was no need to rush at all. Time for some light reading
     while the cake finishes baking?
-  - AHH!! CURSES!!! My cake :''(( Why am I always called to slaughter when I'm baking??
-  - Ack! Always getting summoned at the wrong time! This is definitely overcooked...
-    Ah, well...
   - Well that was quite the skirmish! Hopefully no more calls tonight. This cake
     is perfect - light and fluffy :)
+  - Ack! Always getting summoned at the wrong time! This is definitely overcooked...
+    Ah, well...
+  - AHH!! CURSES!!! My cake :''(( Why am I always called to slaughter when I'm baking??

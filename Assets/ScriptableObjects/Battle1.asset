@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 499eb3aa7bd7a344ba695b4427bd958c, type: 3}
   m_Name: Battle1
   m_EditorClassIdentifier: 
-  summonableState: Gather
-  summonableTimeDuringState: 2
+  summonableState: Prep
+  summonableTimeDuringState: 3
   waves:
   - {fileID: 11400000, guid: 0de5b5b294590b84e872b02b937e3904, type: 2}
   - {fileID: 11400000, guid: 0de5b5b294590b84e872b02b937e3904, type: 2}

@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: Eggs
   m_EditorClassIdentifier: 
   dishName: Eggs
-  gatherLocation: {x: 5, y: 5}
-  prepLocation: {x: -5, y: -5}
+  gatherLocation: {x: -7, y: 0.75}
+  prepLocation: {x: 1.5, y: 2}
   cookTime: 100
-  greatThreshold: 60
-  goodThreshold: 20
+  greatThreshold: 70
+  goodThreshold: 50
   breakPoint: 2
   battles:
   - {fileID: 11400000, guid: d55347fabc21ef142b61a8410fa92ff6, type: 2}
@@ -27,11 +27,11 @@ MonoBehaviour:
   GreatImage: {fileID: -784961093, guid: c05d842c7c7db134fa87ba7d8ad01851, type: 3}
   OvercookedImage: {fileID: -740407428, guid: c05d842c7c7db134fa87ba7d8ad01851, type: 3}
   qualityString:
-  - ' AHHHH!! The eggs are burnt to a crisp!! :''( Hopefully you can save your dinner
-    date with the other dishes...'
   - Whew! Back in no time at all. The eggs are still raw! Plenty of time to finish
     cooking :)
-  - Oh no... That summoner kept you just a little too long :( These eggs are edible,
-    but pretty dry...
   - That was a close one! But the eggs are perfectly cooked. Some deviled eggs for
     your favorite devil tonight :)
+  - Oh no... That summoner kept you just a little too long :( These eggs are edible,
+    but pretty dry...
+  - ' AHHHH!! The eggs are burnt to a crisp!! :''( Hopefully you can save your dinner
+    date with the other dishes...'

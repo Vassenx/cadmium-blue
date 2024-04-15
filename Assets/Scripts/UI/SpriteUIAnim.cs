@@ -13,7 +13,7 @@ public class SpriteUIAnim : MonoBehaviour
     private int index;
     private bool hasntStarted = true;
 
-    void Start()
+    void OnEnable()
     {
         StartCoroutine(StartAnim());
     }

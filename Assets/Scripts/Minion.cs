@@ -50,7 +50,7 @@ public class Minion : MonoBehaviour
         
         //play some animation
         
-        Destroy(gameObject);
+        Destroy(gameObject, 0.5f);
         
     }
 
