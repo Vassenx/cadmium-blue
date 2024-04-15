@@ -63,6 +63,10 @@ public class CombatController : MonoBehaviour
     {
         //player will lose time
         isHurt = true;
+        
+        RandomizeSoundClipPlays audioScript = GetComponent<RandomizeSoundClipPlays>();
+        audioScript.StartAudio();
+        
         StartCoroutine(WaitForFlinch(hurtTime));
     }
 
