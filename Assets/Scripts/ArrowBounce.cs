@@ -4,22 +4,26 @@ using UnityEngine;
 
 public class ArrowBounce : MonoBehaviour
 {
+    int floatDirection;
+
     // Start is called before the first frame update
     void Start()
     {
+        floatDirection = 1;
         StartCoroutine(Bounce());
     }
 
     IEnumerator Bounce() {
         while (true) {
-            if (transform.position.y < 1.4f) {
-                transform.position = new Vector2(transform.position.x, transform.position.y + 0.05f);
-                yield return new WaitForSeconds(0.1f);
+            if (transform.localPosition.y > 1f) {
+                floatDirection = -1;
             }
-            if (transform.position.y > 0.8f) {
-                transform.position = new Vector2(transform.position.x, transform.position.y - 0.05f);
-                yield return new WaitForSeconds(0.1f);
+            else if (transform.localPosition.y < 0.8f) {
+                floatDirection = 1;
             }
+
+            transform.localPosition = new Vector2(transform.localPosition.x, transform.localPosition.y + (floatDirection * 0.05f));
+            yield return new WaitForSeconds(0.1f);
         }
     }
 }
