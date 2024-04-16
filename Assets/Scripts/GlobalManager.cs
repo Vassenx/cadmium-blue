@@ -67,7 +67,7 @@ public class GlobalManager : MonoBehaviour
   void Update()
   {
 	  // TODO: testing
-	  if (Input.GetKeyDown(KeyCode.M))
+	  /* if (Input.GetKeyDown(KeyCode.M))
 	  {
           SummonPlayer();
 	  }
@@ -81,7 +81,7 @@ public class GlobalManager : MonoBehaviour
       if (Input.GetKeyDown(KeyCode.B))
       {
           GameObject.FindObjectOfType<WaveManager>().OnEnemyDeath();
-      }
+      } */
   }
 
   public void ShowResultScreen(Meal meal)
