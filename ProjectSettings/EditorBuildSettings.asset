@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Demon.unity
     guid: 3c197bf82f4454840906436eff936fe4
+  - enabled: 1
+    path: Assets/Scenes/Conclusion.unity
+    guid: 5521964e49daa49248f8711f3baab034
   m_configObjects: {}
