@@ -20,6 +20,7 @@ public class Interactable : MonoBehaviour
                 break;
             default:
                 // Set position to be kitchen stove
+                transform.position = new Vector2(1.5f, 2.75f);
                 break;
         }
     }
