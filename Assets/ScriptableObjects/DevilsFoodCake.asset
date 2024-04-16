@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dishName: DevilsFoodCake
   gatherLocation: {x: -7.5, y: 0.5}
-  prepLocation: {x: -1.25, y: 3}
+  prepLocation: {x: -1.25, y: 2.5}
   cookTime: 60
   greatThreshold: 40
   goodThreshold: 30

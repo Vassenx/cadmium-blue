@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dishName: Eggs
   gatherLocation: {x: -7.5, y: 0.5}
-  prepLocation: {x: -1.25, y: 3}
+  prepLocation: {x: -1.25, y: 2.5}
   cookTime: 100
   greatThreshold: 70
   goodThreshold: 50

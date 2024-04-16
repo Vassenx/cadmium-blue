@@ -19,16 +19,16 @@ public class MealContainer:MonoBehaviour
         switch (quality)
         {
             case 0:
-                mealImage.sprite = currentMeal.OvercookedImage;
+                mealImage.sprite = currentMeal.RawImage;
                 break;
             case 1:
-                mealImage.sprite = currentMeal.RawImage;
+                mealImage.sprite = currentMeal.GreatImage;
                 break;
             case 2:
                 mealImage.sprite = currentMeal.GoodImage;
                 break;
             case 3:
-                mealImage.sprite = currentMeal.GreatImage;
+                mealImage.sprite = currentMeal.OvercookedImage;
                 break;
             default:
                 break;

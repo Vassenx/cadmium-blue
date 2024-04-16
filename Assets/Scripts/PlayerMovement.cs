@@ -96,21 +96,18 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    void OnCollisionEnter2D(Collision2D other) {
+    void OnTriggerEnter2D (Collider2D other) {
         if (interactables.Any()) interactables.Last().transform.GetChild(0).gameObject.SetActive(false);
         if (other.gameObject.tag == "Interactable") {
-            other.gameObject.transform.GetChild(0).gameObject.SetActive(true);
             interactables.Add(other.gameObject);
         }
     }
-    void OnCollisionExit2D(Collision2D other)
+    void OnTriggerExit2D (Collider2D other)
     {
         if (other.gameObject.tag == "Interactable") {
-            other.gameObject.transform.GetChild(0).gameObject.SetActive(false);
             interactables.Remove(other.gameObject);
         }
     }
-
 
     IEnumerator Dash()
     {
