@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: ff05773e5f49840d89700c2fc2799a97
+guid: d244383a55ab81e43a26bdbe292a5977
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -45,7 +45,7 @@ TextureImporter:
   compressionQuality: 50
   spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 32
@@ -110,106 +110,43 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: progress_bar_0
+      name: UI_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 62
-        width: 248
-        height: 79
+        x: 32
+        y: 250
+        width: 121
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 59, y: 0, z: 90, w: 0}
+      border: {x: 28, y: 0, z: 28, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 834d2f29936c17946b270d5c4b45f0db
-      internalID: -309630037
+      spriteID: 2e8ea225593869540968bd637897124d
+      internalID: 1280760208
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: progress_bar_1
+      name: UI_1
       rect:
         serializedVersion: 2
-        x: 265
-        y: 80
-        width: 9
-        height: 41
+        x: 36
+        y: 175
+        width: 113
+        height: 69
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
+      border: {x: 55, y: 0, z: 55, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5d4971bbff794d46a9cb511e601f540
-      internalID: -785993763
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: progress_bar_2
-      rect:
-        serializedVersion: 2
-        x: 71
-        y: 21
-        width: 169
-        height: 31
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 60, y: 0, z: 42, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7af2a772a41f6894d868b58961d0d50e
-      internalID: -1899509466
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: progress_bar_3
-      rect:
-        serializedVersion: 2
-        x: 252
-        y: 15
-        width: 9
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 086fad62d9e3dec46b87cf59df36b44b
-      internalID: -1093268610
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: progress_bar_4
-      rect:
-        serializedVersion: 2
-        x: 269
-        y: 15
-        width: 9
-        height: 41
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 29fdb4e4dc3624a4b8508e6af1ffb2a6
-      internalID: -466538065
+      spriteID: 42d0bf37a1c5044499230028f54f4e6b
+      internalID: -2132089860
       vertices: []
       indices: 
       edges: []
@@ -225,11 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      progress_bar_0: -309630037
-      progress_bar_1: -785993763
-      progress_bar_2: -1899509466
-      progress_bar_3: -1093268610
-      progress_bar_4: -466538065
+      UI_0: 1280760208
+      UI_1: -2132089860
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
